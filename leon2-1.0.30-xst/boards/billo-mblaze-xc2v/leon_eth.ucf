@@ -1,0 +1,345 @@
+# PINOUT CONSTRAINTS FOR THE MICROBLAZE and MULTIMEDIA BOARD
+# ZBT RAM MEMORY BANK0
+
+NET "ram_clk(0)" LOC = "G27";
+NET "ram_clken(0)" LOC = "G30";
+NET "ram_wen(0)" LOC = "F26";
+NET "ram_wena(0)" LOC = "J24";
+NET "ram_wenb(0)" LOC = "H24";
+NET "ram_wenc(0)" LOC = "F29";
+NET "ram_wend(0)" LOC = "G29";
+NET "ram_burst(0)" LOC = "K23";
+NET "ram_oen(0)" LOC = "F30";
+NET "ram_cen(0)" LOC = "G26";
+
+NET "ram_address0(18)" LOC = "L23";
+NET "ram_address0(17)" LOC = "F28";
+NET "ram_address0(16)" LOC = "U28";
+NET "ram_address0(15)" LOC = "T25";
+NET "ram_address0(14)" LOC = "T24";
+NET "ram_address0(13)" LOC = "U29";
+NET "ram_address0(12)" LOC = "V29";
+NET "ram_address0(11)" LOC = "T27";
+NET "ram_address0(10)" LOC = "U27";
+NET "ram_address0(9)" LOC = "H29";
+NET "ram_address0(8)" LOC = "G28";
+NET "ram_address0(7)" LOC = "G25";
+NET "ram_address0(6)" LOC = "H25";
+NET "ram_address0(5)" LOC = "AB27";
+NET "ram_address0(4)" LOC = "AA27";
+NET "ram_address0(3)" LOC = "AA29";
+NET "ram_address0(2)" LOC = "AB29";
+NET "ram_address0(1)" LOC = "U23";
+NET "ram_address0(0)" LOC = "T23";
+
+NET "ram_data0(31)" LOC = "K26";
+NET "ram_data0(30)" LOC = "N30";
+NET "ram_data0(29)" LOC = "R23";
+NET "ram_data0(28)" LOC = "R27";
+NET "ram_data0(27)" LOC = "R29";
+NET "ram_data0(26)" LOC = "R25";
+NET "ram_data0(25)" LOC = "P28";
+NET "ram_data0(24)" LOC = "T30";
+
+NET "ram_data0(23)" LOC = "H28";
+NET "ram_data0(22)" LOC = "K25";
+NET "ram_data0(21)" LOC = "H26";
+NET "ram_data0(20)" LOC = "H27";
+NET "ram_data0(19)" LOC = "L24";
+NET "ram_data0(18)" LOC = "K27";
+NET "ram_data0(17)" LOC = "J29";
+NET "ram_data0(16)" LOC = "M25";
+
+NET "ram_data0(15)" LOC = "L26";
+NET "ram_data0(14)" LOC = "L25";
+NET "ram_data0(13)" LOC = "K29";
+NET "ram_data0(12)" LOC = "J27";
+NET "ram_data0(11)" LOC = "K24";
+NET "ram_data0(10)" LOC = "J28";
+NET "ram_data0(9)" LOC = "J26";
+NET "ram_data0(8)" LOC = "J25";
+
+NET "ram_data0(7)" LOC = "T28";
+NET "ram_data0(6)" LOC = "U30";
+NET "ram_data0(5)" LOC = "R28";
+NET "ram_data0(4)" LOC = "R24";
+NET "ram_data0(3)" LOC = "T29";
+NET "ram_data0(2)" LOC = "P27";
+NET "ram_data0(1)" LOC = "P23";
+NET "ram_data0(0)" LOC = "P30";
+
+
+# ZBT RAM MEMORY BANK1
+
+NET "ram_clk(1)" LOC = "AB25";
+NET "ram_clken(1)" LOC = "AD30";
+NET "ram_wen(1)" LOC = "AE30";
+NET "ram_wena(1)" LOC = "AA25";
+NET "ram_wenb(1)" LOC = "AA24";
+NET "ram_wenc(1)" LOC = "Y24";
+NET "ram_wend(1)" LOC = "AC29";
+NET "ram_burst(1)" LOC = "AC28";
+NET "ram_oen(1)" LOC = "AB28";
+NET "ram_cen(1)" LOC = "AB30";
+
+NET "ram_address1(18)" LOC = "Y23";
+NET "ram_address1(17)" LOC = "AA23";
+NET "ram_address1(16)" LOC = "AJ27";
+NET "ram_address1(15)" LOC = "AH26";
+NET "ram_address1(14)" LOC = "AK27";
+NET "ram_address1(13)" LOC = "AK26";
+NET "ram_address1(12)" LOC = "AC21";
+NET "ram_address1(11)" LOC = "AC20";
+NET "ram_address1(10)" LOC = "AG24";
+NET "ram_address1(9)" LOC = "AC26";
+NET "ram_address1(8)" LOC = "AB26";
+NET "ram_address1(7)" LOC = "Y25";
+NET "ram_address1(6)" LOC = "W25";
+NET "ram_address1(5)" LOC = "AH25";
+NET "ram_address1(4)" LOC = "AE21";
+NET "ram_address1(3)" LOC = "AD22";
+NET "ram_address1(2)" LOC = "AJ25";
+NET "ram_address1(1)" LOC = "AJ24";
+NET "ram_address1(0)" LOC = "AG25";
+
+NET "ram_data1(31)" LOC = "AH29";
+NET "ram_data1(30)" LOC = "AE27";
+NET "ram_data1(29)" LOC = "AC23";
+NET "ram_data1(28)" LOC = "AH30";
+NET "ram_data1(27)" LOC = "AF28";
+NET "ram_data1(26)" LOC = "AB23";
+NET "ram_data1(25)" LOC = "AK29";
+NET "ram_data1(24)" LOC = "AE23";
+
+NET "ram_data1(23)" LOC = "AC27";
+NET "ram_data1(22)" LOC = "AB24";
+NET "ram_data1(21)" LOC = "AE29";
+NET "ram_data1(20)" LOC = "AD28";
+NET "ram_data1(19)" LOC = "AC25";
+NET "ram_data1(18)" LOC = "AF30";
+NET "ram_data1(17)" LOC = "AD26";
+NET "ram_data1(16)" LOC = "AD24";
+
+NET "ram_data1(15)" LOC = "AE24";
+NET "ram_data1(14)" LOC = "AE26";
+NET "ram_data1(13)" LOC = "AG30";
+NET "ram_data1(12)" LOC = "AD25";
+NET "ram_data1(11)" LOC = "AE28";
+NET "ram_data1(10)" LOC = "AD29";
+NET "ram_data1(9)" LOC = "AC24";
+NET "ram_data1(8)" LOC = "AD27";
+
+NET "ram_data1(7)" LOC = "AE22";
+NET "ram_data1(6)" LOC = "AJ28";
+NET "ram_data1(5)" LOC = "AC22";
+NET "ram_data1(4)" LOC = "AG28";
+NET "ram_data1(3)" LOC = "AJ30";
+NET "ram_data1(2)" LOC = "AD23";
+NET "ram_data1(1)" LOC = "AF27";
+NET "ram_data1(0)" LOC = "AG29";
+
+# ZBT RAM MEMORY BANK2
+
+NET "ram_clk(2)" LOC = "AJ22";
+NET "ram_clken(2)" LOC = "AE20";
+NET "ram_wen(2)" LOC = "AJ23";
+NET "ram_wena(2)" LOC = "AF24";
+NET "ram_wenb(2)" LOC = "AG23";
+NET "ram_wenc(2)" LOC = "AD20";
+NET "ram_wend(2)" LOC = "AD21";
+NET "ram_burst(2)" LOC = "AF23";
+NET "ram_oen(2)" LOC = "AE19";
+NET "ram_cen(2)" LOC = "AK25";
+
+NET "ram_address2(18)" LOC = "AF22";
+NET "ram_address2(17)" LOC = "AG21";
+NET "ram_address2(16)" LOC = "AE11";
+NET "ram_address2(15)" LOC = "AJ7";
+NET "ram_address2(14)" LOC = "AJ8";
+NET "ram_address2(13)" LOC = "AG7";
+NET "ram_address2(12)" LOC = "AG8";
+NET "ram_address2(11)" LOC = "AD11";
+NET "ram_address2(10)" LOC = "AD10";
+NET "ram_address2(9)" LOC = "AH23";
+NET "ram_address2(8)" LOC = "AG22";
+NET "ram_address2(7)" LOC = "AK24";
+NET "ram_address2(6)" LOC = "AH24";
+NET "ram_address2(5)" LOC = "AE9";
+NET "ram_address2(4)" LOC = "AE10";
+NET "ram_address2(3)" LOC = "AF7";
+NET "ram_address2(2)" LOC = "AF8";
+NET "ram_address2(1)" LOC = "AK7";
+NET "ram_address2(0)" LOC = "AJ6";
+
+NET "ram_data2(31)" LOC = "AK14";
+NET "ram_data2(30)" LOC = "AG15";
+NET "ram_data2(29)" LOC = "AC14";
+NET "ram_data2(28)" LOC = "AJ14";
+NET "ram_data2(27)" LOC = "AF11";
+NET "ram_data2(26)" LOC = "AH8";
+NET "ram_data2(25)" LOC = "AK9";
+NET "ram_data2(24)" LOC = "AG9";
+
+NET "ram_data2(23)" LOC = "AH22";
+NET "ram_data2(22)" LOC = "AF21";
+NET "ram_data2(21)" LOC = "AK17";
+NET "ram_data2(20)" LOC = "AC16";
+NET "ram_data2(19)" LOC = "AG17";
+NET "ram_data2(18)" LOC = "AJ16";
+NET "ram_data2(17)" LOC = "AH17";
+NET "ram_data2(16)" LOC = "AD15";
+
+NET "ram_data2(15)" LOC = "AK15";
+NET "ram_data2(14)" LOC = "AH16";
+NET "ram_data2(13)" LOC = "AE16";
+NET "ram_data2(12)" LOC = "AJ17";
+NET "ram_data2(11)" LOC = "AG16";
+NET "ram_data2(10)"LOC = "AC17";
+NET "ram_data2(9)" LOC = "AK18";
+NET "ram_data2(8)" LOC = "AF20";
+
+NET "ram_data2(7)" LOC = "AE12";
+NET "ram_data2(6)" LOC = "AG10";
+NET "ram_data2(5)" LOC = "AJ9";
+NET "ram_data2(4)" LOC = "AH9";
+NET "ram_data2(3)" LOC = "AF10";
+NET "ram_data2(2)" LOC = "AJ15";
+NET "ram_data2(1)" LOC = "AC15";
+NET "ram_data2(0)" LOC = "AG14";
+
+# ZBT RAM MEMORY BANK3
+
+NET "ram_clk(3)" LOC = "K5";
+NET "ram_clken(3)" LOC = "P2";
+NET "ram_wen(3)" LOC = "R2";
+NET "ram_wena(3)" LOC = "L5";
+NET "ram_wenb(3)" LOC = "M6";
+NET "ram_wenc(3)" LOC = "L6";
+NET "ram_wend(3)" LOC = "J1";
+NET "ram_burst(3)" LOC = "R8";
+NET "ram_oen(3)" LOC = "P8";
+NET "ram_cen(3)" LOC = "K1";
+
+NET "ram_address3(18)" LOC = "P4";
+NET "ram_address3(17)" LOC = "R4";
+NET "ram_address3(16)" LOC = "AB3";
+NET "ram_address3(15)" LOC = "AC3";
+NET "ram_address3(14)" LOC = "AB7";
+NET "ram_address3(13)" LOC = "AC7";
+NET "ram_address3(12)" LOC = "AB4";
+NET "ram_address3(11)" LOC = "AC4";
+NET "ram_address3(10)" LOC = "AB5";
+NET "ram_address3(9)" LOC = "T2";
+NET "ram_address3(8)" LOC = "R1";
+NET "ram_address3(7)" LOC = "K4";
+NET "ram_address3(6)" LOC = "J4";
+NET "ram_address3(5)" LOC = "AD3";
+NET "ram_address3(4)" LOC = "AF3";
+NET "ram_address3(3)" LOC = "AE2";
+NET "ram_address3(2)" LOC = "AB8";
+NET "ram_address3(1)" LOC = "AC8";
+NET "ram_address3(0)" LOC = "AC5";
+
+NET "ram_data3(31)" LOC = "AA6";
+NET "ram_data3(30)" LOC = "AA2";
+NET "ram_data3(29)" LOC = "Y5";
+NET "ram_data3(28)" LOC = "Y8";
+NET "ram_data3(27)" LOC = "AC2";
+NET "ram_data3(26)" LOC = "Y7";
+NET "ram_data3(25)" LOC = "AC6";
+NET "ram_data3(24)" LOC = "AD1";
+
+NET "ram_data3(23)" LOC = "R7";
+NET "ram_data3(22)" LOC = "R3";
+NET "ram_data3(21)" LOC = "T7";
+NET "ram_data3(20)" LOC = "U1";
+NET "ram_data3(19)" LOC = "T3";
+NET "ram_data3(18)" LOC = "T8";
+NET "ram_data3(17)" LOC = "U2";
+NET "ram_data3(16)" LOC = "T4";
+
+NET "ram_data3(15)" LOC = "U4";
+NET "ram_data3(14)" LOC = "V2";
+NET "ram_data3(13)" LOC = "U8";
+NET "ram_data3(12)" LOC = "U3";
+NET "ram_data3(11)" LOC = "V1";
+NET "ram_data3(10)" LOC = "T6";
+NET "ram_data3(9)" LOC = "P3";
+NET "ram_data3(8)" LOC = "R6";
+
+NET "ram_data3(7)" LOC = "AE1";
+NET "ram_data3(6)" LOC = "AB6";
+NET "ram_data3(5)" LOC = "AA7";
+NET "ram_data3(4)" LOC = "AD2";
+NET "ram_data3(3)" LOC = "AA8";
+NET "ram_data3(2)" LOC = "AA5";
+NET "ram_data3(1)" LOC = "AB2";
+NET "ram_data3(0)" LOC = "Y6";
+
+# RS232 COMMUNICATION PORT / DSU 
+
+# LEON2 UART1
+NET "txd" LOC = "F11";		
+NET "rxd" LOC = "B8";		
+
+# LEON2 DSU 
+NET "dsurx" LOC = "C8";		
+NET "dsutx" LOC = "C9";
+NET "dsuen" LOC = "D10";  #user input 0 
+NET "dsubre" LOC = "F14"; #user input 1
+NET "dsuact" LOC = "B22";  #user led 1 
+
+# FAST ETHERNET PORT
+
+NET "etxd(0)"  LOC = "G20";
+NET "etxd(1)"  LOC = "B21";
+NET "etxd(2)"  LOC = "B20";
+NET "etxd(3)"  LOC = "C22";
+NET "etx_en"  LOC = "G19";
+NET "etx_clk"  LOC = "H16";
+NET "etx_er"  LOC = "D21";
+NET "enetslew(0)"  LOC = "G16";
+NET "enetslew(1)"  LOC = "C16";
+NET "erxd(0)"  LOC = "B16";
+NET "erxd(1)"  LOC = "F17";
+NET "erxd(2)"  LOC = "F16";
+NET "erxd(3)"  LOC = "D16";
+NET "erx_dv"  LOC = "B17";
+NET "erx_er"  LOC = "D22";
+NET "erx_clk"  LOC = "C17";
+NET "erx_col"  LOC = "C23";
+NET "erx_crs"  LOC = "F20";
+NET "enetpause"  LOC = "A16";
+NET "emdio"  LOC = "A17";
+NET "emdc"   LOC = "D17";
+#NET "MDINIT_N"  LOC = "F21";
+#NET "SSN_DATA_P"  LOC = "A22";
+
+# SYSTEM CLOCKS
+NET "master_clk_p" LOC = "AH15";
+NET "master_clk_p" PERIOD = 27 Mhz ;
+OFFSET = OUT : 11.000 : AFTER "master_clk_p" ;
+OFFSET = IN : 8.000 : BEFORE "master_clk_p" ;
+
+NET "erx_clk" PERIOD = 40.000 ;
+OFFSET = IN : 5.000 : BEFORE "erx_clk";
+
+NET "etx_clk" PERIOD = 40.000 ;
+OFFSET = OUT : 15.000 : AFTER "etx_clk" ;
+OFFSET = IN : 5.000 : BEFORE "etx_clk";
+
+#MEMORY CLOCK FEEDBACK LOOP
+NET "mem_clk_fbin_p" LOC = "AE15";
+NET "mem_clk_fbout_p" LOC = "AH14";
+
+# DCM RESET EXTENSION
+NET "extend_dcm_reset_p" LOC = "AH7";
+
+NET "startup_p" LOC = "AK5";
+NET "errorn" LOC = "B27"; #user led 0
+
+# define the DCMs 
+inst "clockgen0_main_dcm" LOC = "DCM_X0Y0";
+inst "clockgen0/main_dcm" LOC = "DCM_X0Y0";
+inst "clockgen0_memory_dcm" LOC = "DCM_X1Y0";
+inst "clockgen0/memory_dcm" LOC = "DCM_X1Y0";

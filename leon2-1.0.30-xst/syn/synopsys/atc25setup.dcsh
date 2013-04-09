@@ -1,0 +1,9 @@
+
+/* library setup for Atmel ATC25 */
+
+search_path = {"." "c:/Synopsys/libraries/syn" "e:/Synopsys/libraries/syn"}
+target_library = "SClib+ind.db"
+link_library = "SClib+ind.db IO33lib+ind.db cb25_memory_max.db PCIlib+ind.db"
+link_library = "*" + link_library
+symbol_library = "IO33lib.sdb SClib.sdb generic.sdb"
+allow_newer_db_files = "true";

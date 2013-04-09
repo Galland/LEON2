@@ -1,0 +1,11 @@
+vcom -quiet  leonlib.vhd 
+vcom -quiet  iram.vhd 
+vcom -quiet  mt48lc16m16a2.vhd 
+vcom -quiet  testmod.vhd 
+vcom -quiet  mspram.vhd 
+vcom -quiet  bprom.vhd
+vcom -quiet  tbgen.vhd 
+vcom -quiet  tblib.vhd 
+vcom -quiet  tbdef.vhd 
+vcom -quiet  tbleon.vhd 
+vcom -quiet  tb_msp.vhd

@@ -1,0 +1,5 @@
+
+source "leon.tcl"
+
+set_option -top_module "leon_pci"
+project -result_file "./leon_pci.edf"

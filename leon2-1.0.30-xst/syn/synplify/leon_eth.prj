@@ -1,0 +1,156 @@
+
+#add_file options
+add_file -verilog "ethermac.v"
+add_file -vhdl -lib work "../../leon/amba.vhd"
+add_file -vhdl -lib work "../../leon/target.vhd"
+add_file -vhdl -lib work "../../leon/device.vhd"
+add_file -vhdl -lib work "../../leon/config.vhd"
+add_file -vhdl -lib work "../../leon/sparcv8.vhd"
+add_file -vhdl -lib work "../../leon/mmuconfig.vhd"
+add_file -vhdl -lib work "../../leon/iface.vhd"
+add_file -vhdl -lib work "../../leon/macro.vhd"
+add_file -vhdl -lib work "../../leon/ambacomp.vhd"
+add_file -vhdl -lib work "../../leon/bprom.vhd"
+add_file -vhdl -lib work "../../leon/multlib.vhd"
+add_file -vhdl -lib work "../../leon/tech_generic.vhd"
+add_file -vhdl -lib work "../../leon/tech_atc18.vhd"
+add_file -vhdl -lib work "../../leon/tech_atc25.vhd"
+add_file -vhdl -lib work "../../leon/tech_atc35.vhd"
+add_file -vhdl -lib work "../../leon/tech_fs90.vhd"
+add_file -vhdl -lib work "../../leon/tech_umc18.vhd"
+add_file -vhdl -lib work "../../leon/tech_virtex.vhd"
+add_file -vhdl -lib work "../../leon/tech_virtex2.vhd"
+add_file -vhdl -lib work "../../leon/tech_tsmc25.vhd"
+add_file -vhdl -lib work "../../leon/tech_proasic.vhd"
+add_file -vhdl -lib work "../../leon/tech_axcel.vhd"
+add_file -vhdl -lib work "../../leon/tech_map.vhd"
+add_file -vhdl -lib work "../../leon/dsu.vhd"
+add_file -vhdl -lib work "../../leon/dsu_mem.vhd"
+add_file -vhdl -lib work "../../leon/dcom_uart.vhd"
+add_file -vhdl -lib work "../../leon/dcom.vhd"
+add_file -vhdl -lib work "../../leon/mmu_icache.vhd"
+add_file -vhdl -lib work "../../leon/mmu_dcache.vhd"
+add_file -vhdl -lib work "../../leon/mmu_acache.vhd"
+add_file -vhdl -lib work "../../leon/mmutlbcam.vhd"
+add_file -vhdl -lib work "../../leon/mmulrue.vhd"
+add_file -vhdl -lib work "../../leon/mmulru.vhd"
+add_file -vhdl -lib work "../../leon/mmutlb.vhd"
+add_file -vhdl -lib work "../../leon/mmutw.vhd"
+add_file -vhdl -lib work "../../leon/mmu.vhd"
+add_file -vhdl -lib work "../../leon/mmu_cache.vhd"
+add_file -vhdl -lib work "../../leon/cachemem.vhd"
+add_file -vhdl -lib work "../../leon/icache.vhd"
+add_file -vhdl -lib work "../../leon/dcache.vhd"
+add_file -vhdl -lib work "../../leon/acache.vhd"
+add_file -vhdl -lib work "../../leon/cache.vhd"
+add_file -vhdl -lib work "../../leon/rstgen.vhd"
+add_file -vhdl -lib work "../../leon/fpulib.vhd"
+add_file -vhdl -lib work "../../leon/mul.vhd"
+add_file -vhdl -lib work "../../leon/div.vhd"
+add_file -vhdl -lib work "../../leon/meiko.vhd"
+add_file -vhdl -lib work "../../leon/fpu_lth.vhd"
+add_file -vhdl -lib work "../../leon/grfpc.vhd"
+add_file -vhdl -lib work "../../leon/fpu_core.vhd"
+add_file -vhdl -lib work "../../leon/iu.vhd"
+add_file -vhdl -lib work "../../leon/proc.vhd"
+add_file -vhdl -lib work "../../leon/lconf.vhd"
+add_file -vhdl -lib work "../../leon/irqctrl.vhd"
+add_file -vhdl -lib work "../../leon/sdmctrl.vhd"
+add_file -vhdl -lib work "../../leon/mctrl.vhd"
+add_file -vhdl -lib work "../../leon/ioport.vhd"
+add_file -vhdl -lib work "../../leon/timers.vhd"
+add_file -vhdl -lib work "../../leon/uart.vhd"
+add_file -vhdl -lib work "../../leon/ahbtest.vhd"
+add_file -vhdl -lib work "../../leon/dma.vhd"
+add_file -vhdl -lib work "../../leon/ahbmst.vhd"
+add_file -vhdl -lib work "../../leon/ahbram.vhd"
+add_file -vhdl -lib work "../../leon/apbmst.vhd"
+add_file -vhdl -lib work "../../leon/wprot.vhd"
+add_file -vhdl -lib work "../../leon/ahbstat.vhd"
+add_file -vhdl -lib work "../../leon/ahbarb.vhd"
+add_file -vhdl -lib work "../../leon/eth_oc.vhd"
+add_file -vhdl -lib work "../../leon/mcore.vhd"
+add_file -vhdl -lib work "../../leon/leon_eth.vhd"
+
+add_file -constraint "leon.sdc"
+
+
+#implementation: "syn"
+impl -add syn
+
+#device options
+set_option -technology VIRTEX2
+set_option -part XC2V3000
+set_option -package FG676
+set_option -speed_grade -4
+
+#compilation/mapping options
+set_option -default_enum_encoding onehot
+set_option -symbolic_fsm_compiler 0
+set_option -resource_sharing 1
+set_option -use_fsm_explorer 0
+set_option -top_module "leon_eth"
+
+#map options
+set_option -frequency 40.000
+set_option -fanout_limit 100
+set_option -disable_io_insertion 0
+set_option -pipe 0
+set_option -update_models_cp 0
+set_option -verification_mode 0
+set_option -modular 0
+set_option -retiming 0
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 0
+
+#set result format/file last
+project -result_file "./leon_eth.edf"
+
+#implementation attributes
+set_option -compiler_compatible 0
+
+
+#implementation: "syn_1"
+impl -add syn_1
+
+#device options
+set_option -technology VIRTEX2
+set_option -part XC2V1500
+set_option -package FF896
+set_option -speed_grade -4
+
+#compilation/mapping options
+set_option -default_enum_encoding onehot
+set_option -symbolic_fsm_compiler 0
+set_option -resource_sharing 0
+set_option -use_fsm_explorer 0
+set_option -top_module "leon_eth"
+
+#map options
+set_option -frequency 40.000
+set_option -fanout_limit 100
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -verification_mode 0
+set_option -modular 0
+set_option -retiming 1
+
+#simulation options
+set_option -write_verilog 0
+set_option -write_vhdl 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 0
+
+#set result format/file last
+project -result_file "syn/leon_eth.edf"
+
+#implementation attributes
+set_option -compiler_compatible 0
+impl -active "syn"

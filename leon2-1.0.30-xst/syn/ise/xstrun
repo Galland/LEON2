@@ -1,0 +1,5 @@
+#!/bin/sh
+# top-module file device
+echo run -iob true -fsm_extract no -rom_style distributed -ifn $2 -bus_delimiter "()" -ifmt vhdl -p $3 -ofn $1 $4 $5
+#echo run -resource_sharing no -iob true -ifn $2 -bus_delimiter "()" -ifmt vhdl -p $3 -ofn $1 $4 $5
+

@@ -1,0 +1,101 @@
+JDF G
+// Created by Project Navigator ver 1.0
+PROJECT syn
+DESIGN leon_avnet
+DEVFAM virtex2p
+DEVFAMTIME 0
+DEVICE xc2vp20
+DEVICETIME 1086679693
+DEVPKG ff896
+DEVPKGTIME 1086787841
+DEVSPEED -5
+DEVSPEEDTIME 1086679693
+DEVTOPLEVELMODULETYPE HDL
+TOPLEVELMODULETYPETIME 0
+DEVSYNTHESISTOOL XST (VHDL/Verilog)
+SYNTHESISTOOLTIME 0
+DEVSIMULATOR Other
+SIMULATORTIME 0
+DEVGENERATEDSIMULATIONMODEL VHDL
+GENERATEDSIMULATIONMODELTIME 0
+SOURCE ../../leon/ahbstat.vhd
+SOURCE ../../leon/dcom_uart.vhd
+SOURCE ../../leon/cache.vhd
+SOURCE ../../leon/fpu_lth.vhd
+SOURCE ../../leon/irqctrl.vhd
+SOURCE ../../leon/irqctrl2.vhd
+SOURCE ../../leon/meiko.vhd
+SOURCE ../../leon/lconf.vhd
+SOURCE ../../leon/mctrl.vhd
+SOURCE ../../leon/wprot.vhd
+SOURCE ../../leon/bprom.vhd
+SOURCE ../../leon/div.vhd
+SOURCE ../../leon/dsu.vhd
+SOURCE ../../leon/mul.vhd
+SOURCE ../../leon/ahbarb.vhd
+SOURCE ../../leon/dcache.vhd
+SOURCE ../../leon/icache.vhd
+SOURCE ../../leon/acache.vhd
+SOURCE ../../leon/cachemem.vhd
+SOURCE ../../leon/fpu_core.vhd
+SOURCE ../../leon/timers.vhd
+SOURCE ../../leon/ahbram.vhd
+SOURCE ../../leon/rstgen.vhd
+SOURCE ../../leon/ahbmst.vhd
+SOURCE ../../leon/dcom.vhd
+SOURCE ../../leon/uart.vhd
+SOURCE ../../leon/ioport.vhd
+SOURCE ../../leon/iu.vhd
+SOURCE ../../leon/dsu_mem.vhd
+SOURCE ../../leon/grfpc.vhd
+SOURCE ../../leon/sdmctrl.vhd
+SOURCE ../../leon/tech_fs90.vhd
+SOURCE ../../leon/tech_axcel.vhd
+SOURCE ../../leon/mmuconfig.vhd
+SOURCE ../../leon/fpulib.vhd
+SOURCE ../../leon/iface.vhd
+SOURCE ../../leon/macro.vhd
+SOURCE ../../leon/amba.vhd
+SOURCE ../../leon/tech_tsmc25.vhd
+SOURCE ../../leon/tech_proasic.vhd
+SOURCE ../../leon/tech_atc25.vhd
+SOURCE ../../leon/tech_atc35.vhd
+SOURCE ../../leon/tech_atc18.vhd
+SOURCE ../../leon/multlib.vhd
+SOURCE ../../leon/tech_virtex.vhd
+SOURCE ../../leon/sparcv8.vhd
+SOURCE ../../leon/tech_umc18.vhd
+SOURCE ../../leon/mcore.vhd
+SOURCE ../../leon/proc.vhd
+SOURCE ../../leon/leon.vhd
+SOURCE ../../leon/device.vhd
+SOURCE ../../leon/config.vhd
+SOURCE ../../leon/target.vhd
+SOURCE ../../leon/ambacomp.vhd
+SOURCE ../../leon/apbmst.vhd
+SOURCE ../../leon/tech_generic.vhd
+SOURCE ../../leon/tech_virtex2.vhd
+SOURCE ../../leon/tech_map.vhd
+SOURCE leon_avnet.vhd
+DEPASSOC leon_avnet leon_avnet.ucf
+[Normal]
+p_ChainDescFile=xstvhd, virtex2p, Implementation.t_genImpactFile, 1088597714, C:\cygwin\home\portolan\leon2-1.0.20-xst\boards\avnet-xc2vp20\leon_avnet.cdf
+p_EnableIncDesignFlow=xstvhd, virtex2p, Implementation.t_placeAndRouteDes, 1087564351, False
+p_impactPort=xstvhd, virtex2p, Implementation.t_impactProgrammingTool, 1086795406, LPT 1 (PC)
+p_SimModelGenerateTestbenchFile=xstvhd, virtex2p, VHDL.t_postMapSimModel, 1087805657, True
+p_SimModelTarget=xstvhd, virtex2p, VHDL.t_postMapSimModel, 1041792828, Modelsim_VHDL
+p_xstROMStyle=xstvhd, virtex2p, Schematic.t_synthesize, 1087911414, Distributed
+p_xstUseSynthConstFile=xstvhd, virtex2p, Schematic.t_synthesize, 1090937217, True
+p_xst_otherCmdLineOptions=xstvhd, virtex2p, Schematic.t_synthesize, 1087916407,
+xilxBitgCfg_GenOpt_BinaryFile=xstvhd, virtex2p, Implementation.t_bitFile, 1086858608, True
+xilxBitgStart_Clk=xstvhd, virtex2p, Implementation.t_bitFile, 1086859730, JTAG Clock
+xilxMapGuideMode=xstvhd, virtex2p, Implementation.t_map, 1087564351, None
+xilxPARguideMode=xstvhd, virtex2p, Implementation.t_par, 1087564351, None
+xilxSynthAddIObuf=xstvhd, virtex2p, Schematic.t_synthesize, 1088684843, True
+_SynthConstraintsFile=xstvhd, virtex2p, Schematic.t_synthesize, 1087917956, C:\cygwin\home\portolan\leon2-1.0.20-xst\boards\avnet-xc2vp20\leon_avnet.xcf
+_SynthOpt=xstvhd, virtex2p, Schematic.t_synthesize, 1086769675, Area
+_SynthRAMStyle=xstvhd, virtex2p, Schematic.t_synthesize, 1088080597, Auto
+[STATUS-ALL]
+leon.splFile=ERRORS,0
+[STRATEGY-LIST]
+Normal=True

@@ -1,0 +1,16 @@
+Reset is on SW1.
+
+To get UART1 and DSUMON running on the XSV800 a serial Y-adapter 
+has to be built.
+
+xsv800 | CPLD Pin | serial
+-------+----------+-------
+rd     | 80       | UART1-rx
+td     | 81       | UART1-tx
+cts    | 85       | DSUMON-rx
+rts    | 82       | DSUMON-tx
+
+To Enable DSUMON SW6-1 and SW6-2 must be turned off.
+
+If you have questions/comments contact
+Ronald Hecht <ronald.hecht@gmx.de>

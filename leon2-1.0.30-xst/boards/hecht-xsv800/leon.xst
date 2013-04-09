@@ -1,0 +1,2 @@
+elaborate -ifmt vhdl -ifn  ../../leon/leon.vhd
+elaborate -ifmt vhdl -ifn  ../../leon/leon_eth.vhd

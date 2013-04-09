@@ -1,0 +1,117 @@
+#############################################################
+#
+#   Pin Mapping for Avnet Xilinx V2P20 Development Board 
+#   Author: Michele Portolan, TIMA Laboratory, portolan@imag.fr
+#   Last Modified: 7 October 2004
+#
+#############################################################
+
+
+#############################################################
+NET "clk" LOC = "G15"; # 33MHz Single-ended, 3.3V
+#NET "clk" LOC = "F15";    # 100MHz Single-ended, 3.3V
+NET "resetn" LOC = "AH8"; # System Reset (also CLKEN to SDRAM)
+#
+#########################################################
+#   Shared Memory Bus (SDRAM,SRAM,FLASH,COMPACTFLASH)   #
+#########################################################
+
+NET "writen" LOC = "AG25";		   #WE_N
+NET "ramoen<0>" LOC = "AH23";	   #OE_N
+NET "ramsn<0>" LOC = "AG16"; #SRAM_CS_N
+
+NET "flash_cs_n" LOC = "AD15"; #FLASH_CS_N
+NET "gpio_cs_n" LOC = "AG5"; #GPIO_CS_N
+CONFIG PROHIBIT = "AD16"; #SYS_ACE_CS_N
+CONFIG PROHIBIT = "AE24"; #SYS_ACE_BRDY
+CONFIG PROHIBIT = "AG23";#SYS_ACE_IRQ
+CONFIG PROHIBIT = "AD23"; #TRGT_IRQ
+CONFIG PROHIBIT = "AF7"; #TRGT_RDY_INIT_N
+
+NET "sdclk" LOC = "AD8"; #"CLK"
+
+NET "sdrasn" LOC = "AG6"; #"RAS"
+NET "sdcasn" LOC = "AG8"; #"CAS"
+NET "sdcsn<0>" LOC = "AE16";	 #SDRAM_CS_N
+
+NET "sddqm<3>" LOC = "AE15"; #BS<0>
+NET "sddqm<2>" LOC = "AH15"; #BS<1>
+NET "sddqm<1>" LOC = "AF16"; #BS<2>
+NET "sddqm<0>" LOC = "AJ15"; #BS<3>
+
+NET "data<31>" LOC = "AF10"; #D<0> downto D<31>
+NET "data<30>" LOC = "AE10"; 
+NET "data<29>" LOC = "AC12";
+NET "data<28>" LOC = "AG14";
+NET "data<27>" LOC = "AC15";
+NET "data<26>" LOC = "AB15";
+NET "data<25>" LOC = "AD17";
+NET "data<24>" LOC = "AE17";
+NET "data<23>" LOC = "AD12";
+NET "data<22>" LOC = "AD10";
+NET "data<21>" LOC = "AF14";
+NET "data<20>" LOC = "AE14";
+NET "data<19>" LOC = "AC10";
+NET "data<18>" LOC = "AD14";
+NET "data<17>" LOC = "AB16";
+NET "data<16>" LOC = "AC16";
+NET "data<15>" LOC = "AK8";
+NET "data<14>" LOC = "AH9";
+NET "data<13>" LOC = "AG7";
+NET "data<12>" LOC = "AF9";
+NET "data<11>" LOC = "AJ9";
+NET "data<10>" LOC = "AD9";
+NET "data<9>" LOC = "AE9";
+NET "data<8>" LOC = "AG10";
+NET "data<7>" LOC = "AH7";
+NET "data<6>" LOC = "AE7";
+NET "data<5>" LOC = "AJ8";
+NET "data<4>" LOC = "AF8";
+NET "data<3>" LOC = "AE8";
+NET "data<2>" LOC = "AD11";
+NET "data<1>" LOC = "AC11";
+NET "data<0>" LOC = "AC9";
+NET "address<20>" LOC = "AH24"; #A<0> downto A<23>, inverted like in example projects
+NET "address<19>" LOC = "AG24";
+NET "address<18>" LOC = "AE22"; #A<2>: first of SDRAM (see schematic) 
+NET "address<17>" LOC = "AC22";
+NET "address<16>" LOC = "AG21";
+NET "address<15>" LOC = "AJ22";
+NET "address<14>" LOC = "AD19";
+NET "address<13>" LOC = "AH22";
+NET "address<12>" LOC = "AC20";
+NET "address<11>" LOC = "AC19";
+NET "address<10>" LOC = "AF17";
+NET "address<9>" LOC = "AD20";
+NET "address<8>" LOC = "AE21";
+NET "address<7>" LOC = "AE23";
+NET "address<6>" LOC = "AG17";
+NET "address<5>" LOC = "AC21";
+NET "address<4>" LOC = "AF24";  #A<16> last of SDRAM (see schematic) 
+NET "address<3>" LOC = "AK23";
+NET "address<2>" LOC = "AJ23"; #A<18> - limit of SRAM
+CONFIG PROHIBIT = "AF23"; #"A<19>"
+CONFIG PROHIBIT = "AF22"; #"A<20>"
+CONFIG PROHIBIT = "AD22"; #"A<21>"
+CONFIG PROHIBIT = "AF21"; #"A<22>"
+CONFIG PROHIBIT = "AD21"; #"A<23>"
+
+#
+#########################################################
+#   Miscellaneaous signals  				             #
+#########################################################
+#
+#NET "errorn" LOC = "G5"
+#CONFIG PROHIBIT = "AJ3";  #Primary Serial Channel Disabled
+#CONFIG PROHIBIT = "AK3";
+NET "dsutx" LOC = "AJ3";      #DSU on primary serial channel
+NET "dsurx" LOC = "AK3";     #
+#NET "pio<15>" LOC = "AJ3";   #UART1 on Primary serial channel
+#NET "pio<14>" LOC = "AK3";
+#CONFIG PROHIBIT = "D30";  #Secondary Serial Channel Disabled
+#CONFIG PROHIBIT = "D29";
+NET "pio<15>" LOC = "D30";   #UART1 on secondary serial channel
+NET "pio<14>" LOC = "D29";
+#NET "dsutx" LOC = "D30";    #DSU on secondary serial channel
+#NET "dsurx" LOC = "D29";    #
+#

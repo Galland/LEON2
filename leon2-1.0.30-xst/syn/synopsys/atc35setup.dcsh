@@ -1,0 +1,8 @@
+
+/* library setup for Atmel ATC35 */
+
+search_path = {"." "c:/Synopsys/libraries/syn"}
+target_library = "ATC35_CELL_slow_3p0v_105c.db"
+link_library = "ATC35_CELL_slow_3p0v_105c.db ATC35_BUFFER_slow_3p0v_105c.db ATC35_MEMORY.db"
+link_library = "*" + link_library
+symbol_library = "ATC35_BUFFER.sdb ATC35_CELL.sdb ATC35_MEMORY.sdb generic.sdb"

@@ -1,0 +1,4 @@
+BEGIN MODEL leon_eth_pci
+NET erx_clk clock_buffer=ibuf;
+NET etx_clk clock_buffer=ibuf;
+END;

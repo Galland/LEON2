@@ -1,0 +1,8 @@
+
+The provided leon.tcl file can be used as a template for
+how to elaborate and analyse leon using leonardo. Target
+technology selection and optimisation of netlist is left
+to the user. Note that leonardo level-3 licensing is required
+to support the elaborate function.
+
+Mail improvements to jiri@gaisler.com

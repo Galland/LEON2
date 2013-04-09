@@ -1,0 +1,124 @@
+VSS_PRODUCT		= EXPERT
+ASSERT_IGNORE		= NOIGNORE
+ASSERT_STOP		= ERROR
+TIMEBASE        	= FS
+TIME_RES_FACTOR		= 1
+HELPDIR         	= $SYNOPSYS/doc/sim/help/
+GPPHELP         	= $SYNOPSYS/doc/sim/help/gpp.hlp
+WINDOW          	= $SYNOPSYS/$ARCH/sim/bin/window.X11
+METAMICRO       	= $SYNOPSYS/$ARCH/sim/bin/micro
+ALLOCATOR       	= $SYNOPSYS/$ARCH/sim/bin/cater
+INTERPRETER     	= $SYNOPSYS/$ARCH/sim/bin/inter
+MERGE           	= $SYNOPSYS/$ARCH/sim/bin/merge
+BROWSER_EXEC           	= $SYNOPSYS/$ARCH/sim/bin/simbrowser
+WAVES_EXEC           	= $SYNOPSYS/$ARCH/sim/bin/waves
+USE_LONGTIME    	= FALSE
+SIMFILE_ENCRYPTION	= NONE
+WAVEFORM        	= WAVES
+WIF2TAB_HDRLEN		= 20
+SAVE_WVMSGS     	= FALSE
+OPEN_WFILE_APPEND_MODE  = FALSE
+BROWSER_NUMLISTS	= 3
+EDITCMD         	= sterm -T Synopsys-Editor -e vi
+GVAN_EDITSTR    	= +%L %F
+GVAN_STOP_ON_WARNS	= TRUE
+DBX_ANALYZER_CMD	= make ANALYZER=gvan
+RESFUNC_OPT     	= FULL_OPT
+XP_AUXPATH      	= $SYNOPSYS/$ARCH/xp/aux
+XP_SCRIPT_PATH  	= $SYNOPSYS/$ARCH/xp/bin
+XP_GEN_TIMING_ERR   	= FALSE
+XP_DELAY_CELL_NAME      = DELAY
+XP_DELAY_LIB_NAME       = STD
+COMPONENT_BINDING	= SOFT
+CS_CCPATH		= gcc
+CS_DEBUG		= FALSE
+CS_NOCHECK		= FALSE
+CS_COMPILED		= FALSE
+SPC			= FALSE
+SPC_ELAB		= FALSE
+CS_ASSERT_STOP_NEXT_WAIT = FALSE
+NO_CONSTRAINT_MESG	= FALSE
+NO_CONSTRAINT_XGEN	= FALSE
+NO_HAZARD_MESG		= FALSE
+NO_HAZARD_XGEN		= FALSE
+GS_REPORT_BUS_CONTENTION = FALSE
+GS_REPORT_BUS_FIGHT	= FALSE
+GS_REPORT_BUS_FLOAT	= FALSE
+SDFWILDCARD		= FALSE
+RUNREAD			=
+-- SDFNAMINGFILE	=
+-- XP_CBMODS		=
+-- XP_LOAD_FILES	=
+-- XP_MAP_FILE		=
+-- XP_TIMING_ERRFILE	=
+-- DUT			=
+-- USER_MENU		=
+PROMPT_STD_INPUT	= FALSE
+MAX_HIERARCHY_DEPTH	= 5000	
+
+-- VSS-Verilog Interface Veriables --
+VLOG_C_COMPILER_PATH = 
+VLOG_C_COMPILE_FLAGS =
+VLOG_C_LINK_FLAGS = -Bstatic
+VLOG_TARGET_DIR = ./
+VLOG_USER_LIB_DIR = 
+VLOG_USER_LIB_NAMES = 
+VLOG_ACC_LIB_DIR =
+VLOG_LIB_DIR =
+VLOG_ACC_LIB_NAMES =
+VLOG_LIB_NAMES =
+VLOG_ACC_LIB_VERSION = 1.6a
+VLOG_OTHER_LIB_PATHS =
+VLOG_SIM_HOSTNAME =
+VLOG_SIM_SHELLPATH =
+VLOG_COMMAND_OPTIONS =
+VLOG_COMMAND_FILE =
+VLOG_OPEN_SIM_WINDOW = true
+VLOG_SIM_WINDOW_PAUSE = true
+VLOG_SIM_WINDOW_HOST =
+
+
+WORK            > DEFAULT
+DEFAULT         : leon/work
+
+-- VHDL library to UNIX dir mappings --
+SYNOPSYS	: $SYNOPSYS/packages/synopsys/lib
+IEEE		: $SYNOPSYS/packages/IEEE/lib
+IEEE_ASIC	: $SYNOPSYS/packages/IEEE_asic/lib
+COMDISCO_MVL9	: $SYNOPSYS/packages/comdisco/lib
+GTECHX		: $SYNOPSYS/packages/gtechx/lib
+GSCOMP		: $SYNOPSYS/packages/gscomp/lib
+VITAL		: $SYNOPSYS/packages/VITAL/lib
+DWARE		: $SYNOPSYS/packages/dware/lib
+CD		: $SYNOPSYS/packages/CD/lib
+UI		: $SYNOPSYS/packages/UI/lib
+VHDLGEN		: $SYNOPSYS/packages/VHDLGEN/lib
+DW01		: $SYNOPSYS/dw/dw01/lib
+DW02		: $SYNOPSYS/dw/dw02/lib
+DW03		: $SYNOPSYS/dw/dw03/lib
+DW04		: $SYNOPSYS/dw/dw04/lib
+DW05		: $SYNOPSYS/dw/dw05/lib
+DW06		: $SYNOPSYS/dw/dw06/lib
+DW07		: $SYNOPSYS/dw/dw07/lib
+
+-- VHDL source files search path --
+USE = . leon tbench $SYNOPSYS/packages/synopsys/src \
+        $SYNOPSYS/packages/IEEE/src \
+        $SYNOPSYS/packages/IEEE_asic/src \
+        $SYNOPSYS/packages/mvl_7/src \
+        $SYNOPSYS/packages/mvl7_asic/src \
+        $SYNOPSYS/packages/comdisco/src \
+        $SYNOPSYS/packages/gtech/src \
+        $SYNOPSYS/packages/gscomp/src \
+        $SYNOPSYS/packages/dware/src \
+        $SYNOPSYS/packages/CD/src \
+        $SYNOPSYS/packages/UI/src \
+        $SYNOPSYS/packages/VHDLGEN/src \
+        $SYNOPSYS/dw/dw01/src \
+        $SYNOPSYS/dw/dw02/src \
+        $SYNOPSYS/dw/dw03/src \
+        $SYNOPSYS/dw/dw04/src \
+        $SYNOPSYS/dw/dw05/src \
+        $SYNOPSYS/dw/dw06/src \
+        $SYNOPSYS/dw/dw07/src \
+	leon tbench

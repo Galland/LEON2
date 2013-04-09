@@ -1,0 +1,9 @@
+
+
+This directory contains scripts to synthesise leon using Synopsys.
+The scripts should be used a templates, customise according to your needs.
+The following script are provided:
+
+leon.dcsh	script for synopsys DC
+
+leon.fc2	script for synopsys fpga-compiler-II

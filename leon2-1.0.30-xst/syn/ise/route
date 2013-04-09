@@ -1,0 +1,8 @@
+#!/bin/sh
+# route entity ucf-file device effort
+edif2ngd $1.edf
+ngdbuild $1.ngo -aul -uc $2 -p $3
+map -pr b -p $3 $1
+par -ol $4 -w $1 $1.ncd 
+trce -v 25 $1.ncd $1.pcf 
+bitgen $1 -l -m -w -f bitgen.ut

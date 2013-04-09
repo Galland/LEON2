@@ -1,0 +1,81 @@
+create_project leon
+
+add_file -library WORK -format VHDL ../../leon/amba.vhd
+add_file -library WORK -format VHDL ../../leon/target.vhd
+add_file -library WORK -format VHDL ../../leon/device.vhd
+add_file -library WORK -format VHDL ../../leon/config.vhd
+add_file -library WORK -format VHDL ../../leon/sparcv8.vhd
+add_file -library WORK -format VHDL ../../leon/mmuconfig.vhd
+add_file -library WORK -format VHDL ../../leon/iface.vhd
+add_file -library WORK -format VHDL ../../leon/macro.vhd
+add_file -library WORK -format VHDL ../../leon/bprom.vhd
+add_file -library WORK -format VHDL ../../leon/multlib.vhd
+add_file -library WORK -format VHDL ../../leon/ambacomp.vhd
+add_file -library WORK -format VHDL ../../leon/tech_generic.vhd
+add_file -library WORK -format VHDL ../../leon/tech_virtex.vhd
+add_file -library WORK -format VHDL ../../leon/tech_virtex2.vhd
+add_file -library WORK -format VHDL ../../leon/tech_atc18.vhd
+add_file -library WORK -format VHDL ../../leon/tech_atc25.vhd
+add_file -library WORK -format VHDL ../../leon/tech_atc35.vhd
+add_file -library WORK -format VHDL ../../leon/tech_fs90.vhd
+add_file -library WORK -format VHDL ../../leon/tech_umc18.vhd
+add_file -library WORK -format VHDL ../../leon/tech_tsmc25.vhd
+add_file -library WORK -format VHDL ../../leon/tech_proasic.vhd
+add_file -library WORK -format VHDL ../../leon/tech_axcel.vhd
+add_file -library WORK -format VHDL ../../leon/tech_map.vhd
+add_file -library WORK -format VHDL ../../leon/mmu_icache.vhd
+add_file -library WORK -format VHDL ../../leon/mmu_dcache.vhd
+add_file -library WORK -format VHDL ../../leon/mmu_acache.vhd
+add_file -library WORK -format VHDL ../../leon/mmutlbcam.vhd
+add_file -library WORK -format VHDL ../../leon/mmulrue.vhd
+add_file -library WORK -format VHDL ../../leon/mmulru.vhd
+add_file -library WORK -format VHDL ../../leon/mmutlb.vhd
+add_file -library WORK -format VHDL ../../leon/mmutw.vhd
+add_file -library WORK -format VHDL ../../leon/mmu.vhd
+add_file -library WORK -format VHDL ../../leon/mmu_cache.vhd
+add_file -library WORK -format VHDL ../../leon/cachemem.vhd
+add_file -library WORK -format VHDL ../../leon/icache.vhd
+add_file -library WORK -format VHDL ../../leon/dcache.vhd
+add_file -library WORK -format VHDL ../../leon/acache.vhd
+add_file -library WORK -format VHDL ../../leon/cache.vhd
+add_file -library WORK -format VHDL ../../leon/ahbmst.vhd
+add_file -library WORK -format VHDL ../../leon/dcom_uart.vhd
+add_file -library WORK -format VHDL ../../leon/dcom.vhd
+add_file -library WORK -format VHDL ../../leon/dsu_mem.vhd
+add_file -library WORK -format VHDL ../../leon/dsu.vhd
+add_file -library WORK -format VHDL ../../leon/apbmst.vhd
+add_file -library WORK -format VHDL ../../leon/ahbstat.vhd
+add_file -library WORK -format VHDL ../../leon/ahbtest.vhd
+add_file -library WORK -format VHDL ../../leon/ahbram.vhd
+add_file -library WORK -format VHDL ../../leon/ahbarb.vhd
+add_file -library WORK -format VHDL ../../leon/lconf.vhd
+add_file -library WORK -format VHDL ../../leon/fpulib.vhd
+add_file -library WORK -format VHDL ../../leon/fp1eu.vhd
+add_file -library WORK -format VHDL ../../leon/ioport.vhd
+add_file -library WORK -format VHDL ../../leon/irqctrl.vhd
+add_file -library WORK -format VHDL ../../leon/sdmctrl.vhd
+add_file -library WORK -format VHDL ../../leon/mctrl.vhd
+add_file -library WORK -format VHDL ../../leon/rstgen.vhd
+add_file -library WORK -format VHDL ../../leon/timers.vhd
+add_file -library WORK -format VHDL ../../leon/uart.vhd
+add_file -library WORK -format VHDL ../../leon/div.vhd
+add_file -library WORK -format VHDL ../../leon/mul.vhd
+add_file -library WORK -format VHDL ../../leon/meiko.vhd
+add_file -library WORK -format VHDL ../../leon/fpu_lth.vhd
+add_file -library WORK -format VHDL ../../leon/fpu_core.vhd
+add_file -library WORK -format VHDL ../../leon/iu.vhd
+add_file -library WORK -format VHDL ../../leon/proc.vhd
+add_file -library WORK -format VHDL ../../leon/wprot.vhd
+add_file -library WORK -format VHDL ../../leon/mcore.vhd
+add_file -library WORK -format VHDL ../../leon/leon.vhd
+
+analyze_file -progress
+
+create_chip -progress -name leon -target VIRTEX -device V300PQ240 -speed -4 -frequency 25 leon
+current_chip leon
+
+#optimize_chip -name leon-Optimized -progress
+
+#export_chip
+
+list_message

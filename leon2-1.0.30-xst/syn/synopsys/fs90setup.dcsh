@@ -1,0 +1,9 @@
+
+/* library setup for Atmel ATC35 */
+
+search_path = {"." "c:/Synopsys/libraries/syn" "e:/Synopsys/libraries/syn"}
+target_library = "fs90a_b_syn.db"
+link_library = {"fs90a_b_syn.db" "ftcmacro.db"}
+link_library = "*" + link_library
+symbol_library = "fs90a_b.sdb generic.sdb"
+allow_newer_db_files = "true";

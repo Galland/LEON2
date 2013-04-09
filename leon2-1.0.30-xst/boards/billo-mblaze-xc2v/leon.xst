@@ -1,0 +1,1 @@
+elaborate -ifmt vhdl -ifn  mblaze_clkgen.vhd

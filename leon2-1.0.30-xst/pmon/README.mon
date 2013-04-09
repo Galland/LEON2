@@ -1,0 +1,55 @@
+
+PMON simple S-record monitor, 3-2-2001
+-------------------------------------------
+
+Introduction
+------------
+
+Pmon is a simple monitor that can be placed in an on-chip boot prom,
+external prom or cache memories (using the boot-cache configuration). 
+Two versions are provided, one to be used for on-chip prom or caches
+(bprom.c) and one for external proms (eprom.c). The on-chip version
+automatically detects attached memory and configures the memory
+controller register (2). The external version (eprom.c) needs to
+be edited first to reflect the current board configuration.
+
+NOTE: this version must be compiled with an ELF-based compiler such 
+      as LECCS.
+
+Compilation
+-----------
+
+First edit the board-specific parameters in the beging of eprom.c
+Then compile the monitors with:
+
+   sparc-rtems-gcc -nostdlib -nostdinc -O2 -Ttext=0 eprom.c -o eprom
+   sparc-rtems-gcc -nostdlib -nostdinc -O2 -Ttext=0 bprom.c -o bprom
+
+To generate a binary image to be used by rom2vhdl, convert as follows:
+
+   sparc-rtems-objcopy -O binary bprom bprom.bin
+  
+
+Conversion to your prom/cache format is left to the user. Note
+that you can use sparc-rtems-objcopy to convert PMON to S-records:
+
+   sparc-rtems-objcopy -O srec eprom eprom.srec
+
+
+Usage
+-----
+
+The monitor writes a boot message on UART1 transmitter and then 
+waits for S-records to be downloaded on UART1 receiver. It 
+recognises two types of S-records: memory contents and start
+address. A memory content S-record is saved to the appropriate
+address in memory, while a start address record will cause the
+monitor to jump to the indicated address. Applications
+compiled with LECCS (elf) can be converted to a suitable S-record
+stream with:
+
+sparc-rtems-objcopy -O srec app app.srec
+
+Good luck, Jiri.
+
+(jgais@gaisler.com)

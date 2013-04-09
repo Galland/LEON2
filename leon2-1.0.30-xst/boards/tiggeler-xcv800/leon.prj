@@ -1,0 +1,4 @@
+source "leon.tcl"
+
+set_option -top_module "leon"
+project -result_file "./leon.edf"

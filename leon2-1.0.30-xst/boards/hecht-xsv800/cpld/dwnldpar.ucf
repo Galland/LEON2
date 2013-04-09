@@ -1,0 +1,176 @@
+#
+# pin assignments for the XC95108 CPLD chip on the XSV Board
+#
+
+# Virtex FPGA
+net v_tck		loc=p4;
+# net v_dout		loc=p6;
+# net v_din		loc=p32;
+# net v_wrb		loc=p7;
+# net v_csb		loc=p8;
+# net v_initb		loc=p9;
+net v_done		loc=p10;
+net v_progb		loc=p11;
+net v_cclk		loc=p12;
+net v_m<0> 		loc=p13;
+net v_m<1> 		loc=p14;
+net v_m<2> 		loc=p15;
+net v_d 		loc=p32;
+# net v_d<1>      loc=p33;
+# net v_d<2>      loc=p34;
+# net v_d<3>      loc=p35;
+# net v_d<4>      loc=p36;
+# net v_d<5>      loc=p37;
+# net v_d<6>      loc=p39;
+# net v_d<7>      loc=p40;
+# net v_a<0>		loc=p16;
+# net v_a<1>		loc=p17;
+# net v_a<2>		loc=p18;
+# net v_a<3>		loc=p19;
+# net v_a<4>		loc=p20;
+# net v_a<5>		loc=p23;
+# net v_a<6>		loc=p24;
+# net v_a<7>		loc=p25;
+# net v_a<8>		loc=p27;
+# net v_a<9>		loc=p28;
+# net v_a<10>		loc=p29;
+# net v_a<11>		loc=p30;
+# net v_a<12>		loc=p49;
+# net v_a<13>		loc=p50;
+# net v_a<14>		loc=p52;
+# net v_a<15>		loc=p53;
+# net v_a<16>		loc=p54;
+# net v_a<17>		loc=p55;
+# net v_a<18>		loc=p56;
+# net v_a<19>		loc=p58;
+# net v_a<20>		loc=p59;
+# net v_frdy		loc=p41;	# Flash ready status
+# net v_c<0>		loc=p42;	# Flash output-enable
+# net v_c<1>		loc=p43;	# Flash write-enable
+# net v_c<2>		loc=p46;	# Flash chip-enable
+
+# Flash RAM
+# net resetb		loc=p3;
+# net rdy			loc=p41;
+net ceb			loc=P46;
+# net oeb			loc=p42;
+# net web			loc=p43;
+# net d<0>		loc=p32;
+# net d<1>		loc=p33;
+# net d<2>		loc=p34;
+# net d<3>		loc=P35;
+# net d<4>		loc=P36;
+# net d<5>		loc=P37;
+# net d<6>		loc=P39;
+# net d<7>		loc=P40;
+# net a<0>		loc=p16;
+# net a<1>		loc=p17;
+# net a<2>		loc=p18;
+# net a<3>		loc=p19;
+# net a<4>		loc=p20;
+# net a<5>		loc=p23;
+# net a<6>		loc=p24;
+# net a<7>		loc=p25;
+# net a<8>		loc=p27;
+# net a<9>		loc=p28;
+# net a<10>		loc=p29;
+# net a<11>		loc=p30;
+# net a<12>		loc=p49;
+# net a<13>		loc=p50;
+# net a<14>		loc=p52;
+# net a<15>		loc=p53;
+# net a<16>		loc=p54;
+# net a<17>		loc=p55;
+# net a<18>		loc=p56;
+# net a<19>		loc=p58;
+# net a<20>		loc=p59;
+
+# DIP and pushbutton switches
+# net dipsw<1>	loc=p50;
+# net dipsw<2>	loc=p52;
+# net dipsw<3>	loc=p53;
+# net dipsw<4>	loc=p54;
+# net dipsw<5>	loc=p55;
+# net dipsw<6>	loc=p56;
+# net dipsw<7>	loc=p58;
+# net dipsw<8>	loc=p59;
+# net sw4		loc=p7;
+
+# left, right, and bargraph LEDs
+# net ls<0>		loc=p32;
+# net ls<1>		loc=p33;
+# net ls<2>		loc=p34;
+# net ls<3>		loc=p35;
+# net ls<4>		loc=p36;
+# net ls<5>		loc=p37;
+# net ls<6>		loc=p39;
+# net rs<0>		loc=p40;
+# net rs<1>		loc=p16;
+# net rs<2>		loc=p17;
+# net rs<3>		loc=p18;
+# net rs<4>		loc=p19;
+# net rs<5>		loc=p20;
+# net rs<6>		loc=p23;
+# net bar<0>		loc=p24;
+# net bar<1>		loc=p25;
+# net bar<2>		loc=p27;
+# net bar<3>		loc=p28;
+# net bar<4>		loc=p29;
+net bar<5>		loc=p30;
+net bar<6>		loc=p49;
+net bar<7>		loc=p42;
+net bar<8>		loc=p43;
+net bar<9>		loc=p41;
+
+# Ethernet transceiver
+net ledsb		loc=p1;
+net ledrb		loc=p95;
+net ledtb		loc=p96;
+net ledlb		loc=p97;
+net ledcb		loc=p99;
+net cfg<0>		loc=p93;
+net cfg<1>		loc=p2;
+net resetb		loc=p3;
+net mf<0>		loc=p91;
+net mf<1>		loc=p90;
+net mf<2>		loc=p89;
+net mf<3>		loc=p87;
+net mf<4>		loc=p86;
+net fde			loc=p92;
+net mddis		loc=p94;
+
+# programmable oscillator
+# net clk			loc=p22;
+
+# video decoder
+# net ce			loc=p3;
+
+# parallel port
+# net ppd<0>      loc=p77;
+# net ppd<1>      loc=p74;
+# net ppd<2>      loc=p72;
+# net ppd<3>      loc=p70;
+# net ppd<4>      loc=p68;
+# net ppd<5>      loc=p67;
+# net ppd<6>      loc=p66;
+# net ppd<7>      loc=p65;
+net ppc<0>		loc=p79;
+net ppc<1>		loc=p78;
+# net ppc<2>		loc=p73;
+net ppc<3>		loc=p71;
+# net pps<3>		loc=p76;
+# net pps<4>		loc=p60;
+# net pps<5>		loc=p61;
+# net pps<6>		loc=p64;
+# net pps<7>		loc=p63;
+
+# serial port
+net rxd			loc=p80;
+net txd			loc=p81;
+net rts			loc=p82;
+net cts			loc=p85;
+
+net v_rxd 		loc=p8;
+net v_txd		loc=p6;
+net v_rts		loc=p9;
+net v_cts		loc=p7;

@@ -1,0 +1,17 @@
+============================================================
+Hints
+============================================================
+SW-0 ==> DSU enable
+SW-1 ==> DSU break
+
+- No reset switch is configured in this design (boards push-buttons are left unused for other applications). 
+  If you want to reset the processor, do it through dsumon.
+- Serial port connection should be ==> 0 X, to allow usage of both DSU and UART1 serials.
+- You need a serial Y-Cable. If you don't have one, refer to the website below.
+
+
+============================================================
+Comments or questions:
+============================================================
+Website howto: http://www.lsc.ic.unicamp.br/~billo/leon2_on_mblazeboard  
+E-mail contact: Eduardo Billo - eduardo.billo@ic.unicamp.br

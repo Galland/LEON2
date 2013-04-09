@@ -1,0 +1,19 @@
+ROM2VHDL
+
+This is a simple ROM core generator. The produced cores are compatible
+with the Synplify tool from the Synplicity company.
+
+To install this utility just simply type make install. For uninstall 
+procedure type make uninstall. It will creare (or remove) all directories
+you need. For details see Makefile.
+
+For help type rom2vhdl -h. For details about core template read the source
+code tmpl.vhdl. For the default template file place see the rom2vhdl source
+code in rom2vhdl.c.
+
+This code may be used under the terms of Version 2 of the GPL,
+read the file COPYING for details.
+
+NOTE: this version has been modifiedby Jiri Gaisler to provide
+boot-prom for LEON. Only the -a switch is still active, all
+other options are hardwired to LEON settings.

@@ -1,0 +1,100 @@
+#
+set -x
+mkdir leon/work
+ncvhdl -nocopyright -linedebug -work work leon/amba.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/target.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/device.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/config.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/mmuconfig.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/sparcv8.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/iface.vhd
+ncvhdl -nocopyright -linedebug -work work leon/macro.vhd
+ncvhdl -nocopyright -linedebug -work work leon/debug.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ambacomp.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/multlib.vhd
+ncvhdl -nocopyright -linedebug -work work leon/tech_generic.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_proasic.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_axcel.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_atc18.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_tsmc25.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_atc35.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_atc25.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_atc18.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_umc18.vhd
+ncvhdl -nocopyright -linedebug -work work leon/tech_fs90.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/bprom.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_virtex.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_virtex2.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/tech_map.vhd
+ncvhdl -nocopyright -linedebug -work work leon/fpulib.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/meiko.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/fpu_lth.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/fpu_core.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/grfpc.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/fp1eu.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/mmu_icache.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmu_dcache.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmu_acache.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmutlbcam.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmulrue.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmulru.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmutlb.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmutw.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmu.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mmu_cache.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mul.vhd
+ncvhdl -nocopyright -linedebug -work work leon/div.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/rstgen.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/iu.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/icache.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dcache.vhd
+ncvhdl -nocopyright -linedebug -work work leon/cachemem.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/acache.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/cache.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/proc.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/irqctrl2.vhd
+ncvhdl -nocopyright -linedebug -work work leon/apbmst.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ahbarb.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ahbram.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/lconf.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/wprot.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ahbtest.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ahbstat.vhd
+ncvhdl -nocopyright -linedebug -work work leon/timers.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/irqctrl.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/uart.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/ioport.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/sdmctrl.vhd
+ncvhdl -nocopyright -linedebug -work work leon/mctrl.vhd
+ncvhdl -nocopyright -linedebug -work work leon/ahbmst.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dcom_uart.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dcom.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dma.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dsu.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/dsu_mem.vhd
+ncvlog -incdir leon -nocopyright -linedebug -work work leon/ethermac.v
+ncvhdl -nocopyright -linedebug -work work leon/pci_arb.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/pci_gr.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/pci.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/eth_oc.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/mcore.vhd
+ncvhdl -nocopyright -linedebug -work work leon/leon.vhd
+ncvhdl -nocopyright -linedebug -work work leon/leon_pci.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/leon_eth_pci.vhd 
+ncvhdl -nocopyright -linedebug -work work leon/leon_eth.vhd 
+
+ncvhdl -nocopyright -linedebug -work work  tbench/leonlib.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/iram.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/mt48lc16m16a2.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/testmod.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/mspram.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/bprom.vhd
+ncvhdl -nocopyright -linedebug -work work  tbench/tbgen.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/tblib.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/tbdef.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/tbleon.vhd 
+ncvhdl -nocopyright -linedebug -work work  tbench/tb_msp.vhd
+
+ncelab -nocopyright tb_func32
+ncelab -nocopyright tb_mem
+ncelab -nocopyright tb_full

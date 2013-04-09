@@ -1,0 +1,14 @@
+# vsim -c grfpc 
+# Loading /usr/local/modeltech/bin/../linux/../std.standard
+# Loading /usr/local/modeltech/bin/../linux/../ieee.std_logic_1164(body)
+# Loading work.target
+# Loading /usr/local/modeltech/bin/../linux/../ieee.std_logic_arith(body)
+# Loading work.device
+# Loading /usr/local/modeltech/bin/../linux/../std.textio(body)
+# Loading work.config
+# Loading work.mmuconfig
+# Loading work.sparcv8
+# Loading work.iface
+# Loading work.grfpc(rtl)
+# ** Warning: (vsim-3473) Component 'grfpcw2_0' is not bound.
+#    Time: 0 ps  Iteration: 0  Region: /grfpc  File: grfpc.vhd

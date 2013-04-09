@@ -1,0 +1,896 @@
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.30-xst, released on 23 July 2005
+
+ * Bug fixes
+
+    - PCI arbiter had swapped reset for APB and PCI registers
+
+    - ICC zero flag was not cleared on divide overflow
+
+  * Minor fixes
+
+    - Corrected out-of-bounds problem in GRFPC i/f (grfpc.vhd)
+
+    - MMU test program could fail for certain cache configs (mmu.c)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.29-xst, released on 6 June 2005
+
+ * Bug fixes
+
+    - Removed potential timing loop in GRFPU interface
+
+    - MMU TLB LRU replacement did not work correctly
+
+  * Minor fixes
+
+    - Corrected out-of-bounds simulation problem in tech_tsmc25 dpram model
+
+    - Disable synplify re-timing and pipelining since it can produce
+      corrupt netlists
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.28-xst, released on 11 May 2005
+
+ * News
+
+    - Added support for Pender/Gaisler GR-XC3S1500 board
+
+ * Minor fixes
+
+    - Added extra resets to cache controllers to improve gate level
+      simulation
+
+    - Route script for Xilinx ISE 6.3 failed on suppressed map switch
+
+    - Small correction of Virage ram simulation model
+
+    - Added 3-clock delay for Xilinx SDRAM DCM reset
+
+    - tkconfig makefile fix to improve cygwin behaviour
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.27-xst, released on 29 January 2005
+
+ * News
+
+    - Switched to sparc-elf (BCC) tool-chain to build test programs
+
+ * Minor fixes
+
+    - Added reset to waitstates registers in mctrl.vhd to ease 
+      gate-level simulation
+
+ * Bug fixes
+
+    - Icache diagnostic reads did not work if icache local ram was disabled
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.26-xst, released on 4 January 2005
+
+ * News
+
+    - Support for byte/half-word access in instruction scratch pad ram
+      (cachemem.vhd, icache.vhd, dcache.vhd)
+
+ * Minor fixes
+
+    - Added reset of r.twowner (mmu.vhd) to ease netlist simulation (mmu.vhd)
+
+ * Bug fixes
+
+    - MMU registers could be corrupted when cache rams were accessed
+      through the DSU in debug mode. (mmu_dcache.vhd)
+
+    - AHB HMASTERLOCK was driven one clock too late (ahbarb.vhd)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.25-xst, released on 7 December 2004
+
+ * News
+
+    - Initial board support for Avnet XC2VP board (Michele Portolan)
+
+    - Back-port of 64-bit sdram controller from leon3/grlib
+
+    - Added instruction scratch pad memory
+
+ * Bug fixes
+
+    - brdyn could not streach ramsn(4) with 8- and 16-bit data bus 
+ 
+    - Actel AX ram generators could not handle small caches
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.24-xst, released on 27 September 2004
+
+ * Bug fixes
+
+    - Minor MMU fix for combined TLB configuration (mmu.vhd)
+
+    - Reset output for ethernet PHY was not driven (leon_eth_pci.vhd)
+
+    - Ethernet AHB I/F could not handle retry at end of burst (eth_oc.vhd)
+
+    - Actel AX rams were wrongly modelled with active-low write/read
+
+    - Removed duplicate definition of cwpmax in iu.vhd
+
+    - Read from Dcache scratch pad RAM failed during dcache miss (dcache.vhd)
+
+    - SRAM byte/half-word read-mod-write writes could fail if executed
+	from SDRAM (mctrl.vhd)
+
+ * Other fixes
+
+    - worked around some GHDL bugs, test bench now passes correctly!
+
+    - Relaxed error mode checking in tbgen.vhd to allow for reset delay.
+
+    - Small typo for frequency setting in config.in
+
+    - Make sure all AHB slaves drives hready to '1' at reset
+
+    - Add reset condition to v.htrans_op in mmu_icache.vhd
+
+    - Added correct DCM placement for GR-CPCI-XC2V6000 board
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.23-xst, released on 24 May 2004
+
+ * New features
+
+    - Added support for Cadence ncsim (see manual)
+
+    - Added support for GNU VHDL (GHDL) (see manual)
+
+ * Bug fixes
+
+    - SDIV/UDIV computed wrong values for certain operands (div.vhd)
+
+    - MMU did not work in combined TLB configuration (mmu.vhd)
+
+ * Other fixes
+
+    - worked around some ncsim bugs (cachemem.vhd, mspram.vhd)
+
+    - tb_full failed if trace buffer disabled (tsoucre/dsu.c)
+
+    - Updated waveforms for external memory access in manual
+    
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.22-xst, released on 4 May 2004
+
+ * New features
+
+   - Improved register file access timing
+
+   - Option to instatiate Actel AX clock buffer (HCLKBUF)
+
+   - Optional separate SDRAM address and data buses
+
+   - Board support package for Xilinx Multimedia board (Eduardo Billo)
+
+   - Added pipeline regs to AHB/APB bridge to improve timing (apbmst.vhd)
+
+ * Bug fixes
+
+   - LDST/SWAP could lock AHB bus when debug mode was entered
+
+   - Cache test program failed on large caches (cache.c)
+
+   - PCI target could not handle certain burst reads (pci_gr.vhd)
+
+ * Other fixes
+
+   - Implementors ID is set to 15 in %psr, officially assigned
+     by SPARC International. Leon2 version ID is set to 2.
+
+   - Updated corrupt synplify project file for gr-pci-xc2v board (leon.prj)
+
+   - Allow read of PC from address 0x9000000c in the DSU (dsu.vhd)
+
+   - tkconfig failed to set correct FPU interface for MEIKO/LTH
+
+   - library mapping for unisim/simprim wrong in top level modelsim.ini
+
+   - Removed Opencores PCI bridge, did never work properly anyway ...
+
+   - Removed dummy InSilicon PCI template
+
+   - Worked around an XST bug in pci_gr.vhd (Richard Pender)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.21-xst, released on 16 November 2003
+
+ * New features
+
+   - Support for synthesis and place&route with ISE 6.1.02i, allowing
+     60 MHz operation on GR-PCI-XC2V (XC2V3000-4).
+
+ * Bug fixes
+
+   - GR PCI target caused parity errors with certain chipsets (pci_gr.vhd)
+
+ * Other fixes
+
+   - updated leon_eth.ucf for hecht-xsv800 bsp (Ronald Hecht)
+
+   - typo in board/gr-pci-xs2v/Makefile
+
+   - updates in ISE project files and route scripts
+
+   - make pmon compile with leccs-1.2
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.20-xst, released on 6 October 2003
+
+ * New features
+
+   - XSV-800 board support added (Ronald Hecht)
+
+   - Support for new FPU (GRFPU/GRFPC)
+
+   - Scratch pad ram can be read through DSU
+
+ * Bug fixes
+
+   - Scratch-pad ram could corrupt data cache access (dcache.vhd)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.19-xst, released on 25 August 2003
+
+ * New features
+
+   - Updated to latest version of Opencores Ethernet MAC.
+
+   - DSU read-out of MMU context field in cache tags
+
+   - Timing improvement of MMU TLB logic
+
+ * Bug fixes
+
+   - Ethernet wishbone/AHB bridge failed on write bursts (eth_oc.vhd).
+
+   - SWAPA would not trap on unaligned address error. (Declan Staunton)
+
+   - Wrong load interlock could cause a LD/MULSCC sequence to
+     produce wrong result. (Declan Staunton)
+
+ * Other fixes
+
+   - tkconfig would always select inferred rom (tkconfig/mkdevice.c)
+
+   - Added bus-keeper on data bus in test bench to keep old value
+     for a few ns after the bus has been tri-stated.
+
+   - Minor fixes in board-specific place&route scripts
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.18-xst, released on 25 July 2003
+
+ * New features
+
+   - New PCI target interface (suitable for DSU use)
+
+   - Added PCI pads to tech_virtex and tech_virtex2 to avoid depending
+     on synthesis contraint files to get the correct drivers
+
+   - The maximum number of SPARC register windows (32) is now supported
+     on the generic, virtex and virtex2 targets.
+
+ * Bug fixes
+
+   - Various MMU fixes. We can now boot linux-2.5.69 until user space.
+     Synthesis with XST still does not work however.
+
+   - Ethernet interface: added external emulation of the reset bit in 
+     the mode register. This bit has been removed in later versions
+     of the core, making it impossible to reset the core in software.
+
+ * Other fixes
+
+   - SDRAM controller now performs the initialisation sequence every time
+     it is enabled, rather than only once at reset time.
+
+   - Make sure that %psr.ef stays 0 if FPU is disabled. This requirement
+     was added in a later (online) version of SPARC V8 manual.
+
+   - Improved the DSU uart baudrate detection algorithm. The DSU
+     uart should now reliably connect to most systems.
+
+   - Added support for wide (> 32 bits) rams in tech_virtex2
+
+   - Upgraded to latest version of the opencores PCI core thanks
+     to Ronald Hecht. The FIFO control in the core is however poorly
+     designed and results in occational data loss ...
+
+   - Dsumon now properly handles hardware breakpoint and watchpoints
+     inserted by gdb
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.17-xst, released on 14 June 2003
+
+ * New features
+
+   - Integrated the MMU designed by Konrad Eisele with the following fixes:
+     - Context fields in cache tags were not written
+     - Pipeline must be held during TLB flushing
+     - Wrong AHB burst indication during MMU table-walk
+     - Work-around some (but not all) XST bugs
+
+   - Updated TSMC 0.25 um library (tech_tsmc25.vhd) (Mok Daniel)
+
+   - Use DCM to produce inverted clock on Virtex2 targets (Mok Daniel)
+
+ * Bug fixes
+
+   - Fast snooping (SNOOP_FAST) did not work with multi-set data cache
+   - Slow snooping tag read/write contention bypass did not work
+
+ * Other fixes
+
+   - Set HADDR[1:0] to zero during 32-bit cache reads (acache.vhd)
+     on suggestion from Simon Goble.
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.16-xst, released on 23 May 2003
+
+ * Bug fixes
+
+   - False cache hits after cache flush could occure in multi-set caches
+     in some (very rare) cases.
+
+   - Double store to data scratch-pad ram failed on second word
+
+   - Tkconfig gave wrong Virtex DLL parameters when 5/4 factor was used
+     (config.in)
+   
+   - Correct spelling of Hans' name: 'Tiggeler' !
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.15-xst, released on 19 May 2003
+
+ * New features
+
+   - Use Virtex DLLs to synchronise SDRAM clock and allow
+     frequency scaling
+
+   - Added Makefile support to automatically synthesise and p&r
+     for various target boards. Gaisler Research's GR-PCI-XC2V and
+     the Avnet Virtex-E Development boards are initially supported.
+
+ * Bug fixes
+
+   - Cache test program fix (tsource/cache.c)
+   - DSU UART and ethernet AHB master had wrong AHB HSIZE
+   - IU registers could be written by co-processor intructions (CPOP1/2)
+   - Load double co-processor (LDDC) did not increment register address
+   - Ethernet core wishbone/AHB interface read wrong data ((Hao Luan)
+   - Wrong trace buffer size calculation in config.vhd
+   - Scratch pad ram would only work when mapped to 0x8f000000 (dcache.vhd)
+
+ * Other fixes
+
+   - Remove .config and store default configuration in defconfig
+     (on suggestion by Ronald Hecht)
+   - Worked around some synopsys bugs in target.vhd
+   - Remove pre-fetching BAR1 attribute in Opencores PCI macro to cure
+     random data loss.
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.14-xst, released on 9 April 2003
+
+ * New features
+
+   - Data cache can be configured with local scratch pad ram
+
+ * Bug fixes
+
+   - Inverted polarity of output enable for ethernet PHY interface 
+     signal emdio
+
+ * Other fixes
+
+   - Add 1 ns output delay to behavioural output pads
+   - Minor documentation updates
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.13-xst, released on 27 March 2003
+
+ * New features
+
+   - Set PCI target areas to pre-fetchable
+   - Added OpenCores Ethernet MAC
+
+ * Bug fixes
+
+   - Generic AHB master (ahbmst.vhd) did not generate correct HBURST
+     in first burst access
+   - Better implementation of getpsr/setpsr in tsource/misc.c (K.Eisele)
+   - Wrong indication of replacement algorithm in cache control reg.
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.12-xst, released on 14 February 2003
+
+ * New features
+
+   - Improved PCI master/target burst support
+
+ * Bug fixes
+
+   - Remove timing loop between AHB arbiter and AHB ram
+   - AHB ram generated wrong write strobes during byte/halftword writes
+   - Make sure DSU returns HREADY on AHB idle or busy cycles
+   - Work-around for wrong verilog include-path bug in Synplify
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.11-xst, released on 9 February 2003
+
+ * New features
+
+   - Added master/target PCI interface based on opencores PCI bridge
+
+ * Bug fixes
+
+   - Work-around for XST bug in AHB arbiter (ahbarb.vhd)
+   - Wrong index in Virtex2 syncram mapping (tech_virtex2)
+   - Cache test program failed on certain configuartion (again)
+
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.10-xst, released on 13 January 2003
+
+ * New features:
+
+   - Configuration record changed to allow synthesis with XST.
+
+ * Bug fixes
+
+   - Spurious interrupts could occur if psr.et changed from 1 to 0,
+     while psr.pil went from !0 to 0 and an interrupt was pending.
+   - shift/swap failed in the LTH FPU (fixes provided by Albert Wang)
+
+ * Other fixes:
+
+   - tkconfig did not allow instatiated boot-proms for virtex fpgas
+   - tech_map.vhd did not allow instatiated boot-proms for virtex2
+   - Test bench failed for certain cache configurations (cache.c)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.9, released on 2 December 2002
+
+ * New features:
+
+   - Improved dcache hit timing for multi-set configurations
+   - New config option for optimised dcache read/write timing
+
+ * Bug fixes:
+
+   - WRPSR did not disable interrupts for the next instruction,
+     potentially causing error traps if WRPSR canged psr.et from 1 to 0,
+     psr.pil /= 15, and an interrupt occured at the same clock cycle.
+   - Store FPU status reg (STFSR) failed due to incorrect timing
+     optimisation introduced in leon2-1.0.8 (iu.vhd).
+   - Caches worked only if number of icache sets >= dcache sets
+
+ * Other fixes (non-critical)
+
+   - Cache test program failed on certain cache configurations.
+   - Fill icache line to end-of-line even if program branches
+   - Documentation update regarding write-protection functionality
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.8, released on 24 November 2002
+
+ * New features:
+
+   - Set-associative cache with random, LRR or LRU replacement
+   - Cache-line locking
+   - Pipelining option on 16x16 integer multiplier 
+   - Atmel ATC18 (0.18 um) port
+   - Virtex2 port
+   - Support for on-chip ram 
+
+ * Bug fixes:
+
+   - DSU access to cache rams could fail under rare conditions
+   - DSU AHB breakpoints only worked in configurations with trace buffer
+   - SDRAM controller could not handle AHB bursts ended with HTRANS_BUSY
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.7, released on 18 September 2002. (J.Gaisler)
+
+ * SDRAM controller generated wrong column address for sdrams with
+   more than 10 column address bits.
+ * Fixed minor re-arbitration bug in PCI arbiter
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.6, released on 30 August 2002. (J.Gaisler)
+
+ * WRY intruction was priviledged but should not be (iu.vhd)
+ * Improved version of Actel Axcellerator FPGA port (tech_axcel.vhd)
+ * New RTL multipliers to improve simulation time (multlib.vhd).
+ * Modify tkconfig/Makefile to also work with solaris make.
+ * Modify mkdevice.c in tkconfig to generate device.vhd such that
+   a bug in Leonardo is avoided.
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.5, released on 25 July 2002. (J.Gaisler)
+
+ * Various UART improvements:
+   - Extended baud-rate range + better baud-rate detection in DSU UART
+   - Added 8-bit glitch filter in UART receiver 
+   - Fixed potential loss of received character (under rare conditions)
+ * Timing improvment in the ATC25 port
+ * Improved DSU timer accuracy during single-stepping
+ * SMUL/UMUL could under some (very rare) condiditions return
+   a result even if pipeline was flushed due to trap/interrupt.
+ * SWAP instruction only wrote odd registers 
+ * tkconfig used icache parameters also for dcache
+ * Miss-aligned access trap changed to have higher priority than
+   FP exception caused by unimplemented STDFQ. (This is just to
+   be fully compliant to SPARC V8, has no practical meaning).
+ * Behavioural regfile (generic_regfile_iu) used wrong read address 
+   for port 2 when generic_dpram_as was used (tech_generic.vhd).
+ * Removed unnecessary write-bypass in generic_regfile_iu
+   (tech_generic.vhd)
+ * Re-structured the test benches (see manual)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.4, released on 6 July 2002. (J.Gaisler)
+
+	* Y register not properly updated after SMUL/UMUL instruction
+	* UART loop-back CTSN/RTSN cross-strap needen one more fix.
+	* Uninitialised variable in acache.vhd caused unnecessary
+	  latches to be infered
+	* Register file power-down support for ATC25 added
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.3, released on 1 July 2002. (J.Gaisler)
+
+	* Added preliminary Actel Proasic FPGA port
+	* Added (very) preliminary Actel Axcelerator FPGA port
+	* Made register file power-save optional to avoid timining problems
+	  on some targets.
+	* tkconfig:
+	  - perform more sanity checks
+	  - set default frequency to 25 MHz in tkconfig to avoid false
+	    out-of-range errors with a certain synthesis tool.
+          - did not set rftype - fixed
+	  - fixed various cygwin problems in mkdevice.c, the generated
+ 	    device.vhd should now be correct on all platforms
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.3beta3, released on 15 June 2002. (J.Gaisler)
+
+	* Added GUI-based configuration tool (tkconfig) !!
+	* Various documentation updates and corrections
+	* Fixed wrong address for ICLEAR2 in testbench (tsource/leon.h)
+	* updated leon/bprom.vhd to latest version (Christian)
+	* updated pmon/lmon.o 
+	* Extended configuration to allow caches up to 2x64 Kbyte
+	* Made clock generator (clkgen) tech-specific to allow target-specific
+          clock generation (PLL ...)
+	* Removed gated-clock option and cleaned-up clk/reset generation
+	* Added optional PCI reset synchronisers
+	* Added alternative Virtex regfile implementation (rftype=2) with 
+	  improved write timing.
+	* UART loop-back mode did not cross-strap CTSN/RTSN - fixed.
+	* tech_generic did not work without infer_pads - fixed.
+	* tech_virtex did not work *with* infer_pads - fixed.
+	
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.3beta2, released on 6 June 2002. (J.Gaisler)
+
+	* Modified SDRAM bank address to always appear on A[16:15]
+	* Modified SDRAM bank size field in memory config register 2
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.3beta1, released on 31 May 2002. (J.Gaisler)
+
+	* Added PC100/PC133 SDRAM controller
+	* Modified AHB arbitration rules to grant a low-priority master
+	  if a high-priority master drives htrans with idle 
+	* drive HPROT to all AHB slaves
+	* fix uart debug 'stuttering' at high frequencies
+	* avoid clearing irq pending bits when clearing irq force bit
+	  (irqctrl.vhd)
+	* Feed-back from write strobes to data bus drivers is made optional
+	  in the configuration record.
+	* Removed the 'raw-address' option - nobody used it anyway ..
+	* Merged port to TSMC 0.25 um with Artisan rams (contrib. by Daniel Mok)
+	* Clean up reset generation and removed un-necessary 'rawrst' signal.
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.2a, released on 25 February 2002. (J.Gaisler)
+
+	* UMAC/SMAC erronously updated ASR18 when trapped (fixed).
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.2, released on 20 February 2002. (J.Gaisler)
+
+	* Corrected ASI generation during co-processor load/store
+	* Timing optimisation of data cache AHB/HLOCK generation 
+	* Timing optimisation of data cache hit generation 
+	* Modification of configuration record to work-around
+	  Leonardo-2001.x bugs.
+	* Improve accuracy of DSU timer during stepping
+	* DSU did not break on load exception (trap 0x09) (fixed)
+	* Change back to cacheability table (acache.vhd)
+	* Remove all use of non-standard HCACHE signal (amba.vhd, acache.vhd)
+	* Add generation of AHB HPROT signals for processor (acache.vhd)
+	* Modified access with ASI 4 and 7 to force a miss but not 
+	  allocate a new line
+	* HSIZE was incorrectly set to 8-/16-bits during byte/halfword
+	   cacheable loads when the cache controller in fact expected a
+	   32-bit word (fixed, acache.vhd).
+	* Fixed broken disassembly when the DSU is not enabled
+	* Added modelsim-specific macro for top-level compile
+	  (modelsim/compile.do)
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.1, released on 15 February 2002. (J.Gaisler)
+
+	* Addition of a partially completed IEEE-754 floating-point unit,
+	  contributed by Martin Kasprzyk from Lund Technical University
+
+	* Modification of AHB arbiter re-arbitration policy (again). 
+	  Re-arbitration is now blocked during locked or burst transfers.
+
+	* Correction of AHB arbiter's sampling of the HLOCK signal
+
+	* Processor did not handle AHB retry properly on certain 
+	  load/store operations (fixed)
+
+	* Dummy drivers on unused AHB/APB slave signals used wrong 
+	  bus index (fixed) 
+
+------------------------------------------------------------------------
+
+LEON-2 VHDL model version 1.0.0, released on 7 February 2002. (J.Gaisler)
+
+	* Addition of on-chip debug support (dsu, dsu_mem, dcom, dcom_uart)
+	* Addition of data cache snooping for Virtex and ATC25 targets
+	* Modification of AHB arbiter bus arbitration
+	* Fixed problem with multiple break detection in UART (uart.vhd)
+	* Reading the baudrate register in UART returned scaler (uart.vhd)
+	* Various area/speed optimisations (iu, dcache)
+	* Added one BRDYN-controlled ram chip select
+	* Various documentation fixes
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.4.0, released on 26 November 2001. (J.Gaisler)
+
+	* PMON erronously cleared preset number of ram waistates
+	* testbench ram did not read last line in program file
+	  (reported by Marius Vollmer)
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.7, released on 12 August 2001. (J.Gaisler)
+
+	* Cache controllers are now disabled when cache state
+	  is set to X0 (was 00). (dcache.vhd, icache.vhd)
+	* Modified  8/16-bit I/O bus handling (see manual)
+	* Corrected BRDYN to only affect I/O area
+	* Moved regfile and cache memories to proc.vhd to get more
+	  accurate wire-loads during synthesis
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.6, released on 24 July 2001. (J.Gaisler)
+
+	* Finally fixed dual-boot option (thanks to Stephan Schirrmann)
+	* Added UMC 0.18 um port (thanks to Raijmond Keulen)
+	* Fixed default AHB master handling (thanks to Daniel Mok)
+	* Modified the generation of data_storage_error trap (iu.vhd)
+	* Moved regfile from proc to iu
+	* Moved acache from proc to cache
+	* Added separate regfile generator for parallel FPU/CP
+	* Fixed incorrect rounding in integer divider unit
+	* Fixed problem with byte-writes when using 8/16-bit I/O bus
+	* Modified I/O bus cycle to add address lead-in cycle
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.5, released on 3 July 2001. (J.Gaisler)
+
+	* Corrected missing I/O pad problem in ATC25 port
+	* Cleaned-up register-file write strobe generation
+	* Modified bprom.c to properly detect 8-bit ram
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.4, released on 1 July 2001. (J.Gaisler)
+
+	* Added UMC 0.25 port (FS90/FTC25) (tech_fs90.vhd)
+	* Modified AHB error interrupt generation (ahbstat.vhd)
+	* Simplified ATC25 ram mega cell interface (tech_atc25.vhd)
+	* Added proper PCI pads for ATC25 (tech_atc25, tech_map)
+	* Added more PCI device configuration options (target.vhd)
+	* Fixed missing waitstate in 8-bit memory read cycle (mctrl.vhd)
+	* Added hardware instruction and data watchpoints (iu.vhd)
+	* Cleaned-up the test program boot-strap code (boot*.S)
+	* Gave data_store_error highest trap priority (SPARCV8) (iu.vhd)
+	* Modified pad drive strenght instantiation
+	* D[15:0] can also be used as PIO outputs in 8/16-bit memory mode
+	* Prom bank 1 can now be accessed even if internal boot prom is enabled
+	* Fixed occasionally missed timer restart
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.3, released on 25 May 2001. (J.Gaisler)
+
+	* Fixed lost interrupt problem in interrupt controller (irqcrl.vhd)
+	* Corrected wrong length of UART start bit (uart.vhd)
+	* Made pmon/eprom.c compile with LECCS-1.1
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.2, released on 22 May 2001. (J.Gaisler)
+
+	* Added optional secondary interrupt controller
+	* Fixed UART transmitter lost interrupt problem
+	* Updated xilinx .ngo file for PMON
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3.1, released on 13 May 2001. (J.Gaisler)
+
+	* Updated virtex_prom256.ngo to contain latest PMON
+	* Added utility to put rdbmon in boot-prom on FPGA's
+	* The UART can now optionally be clocked from PIO[3]
+	* Added possibility to use both internal and external boot prom
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.3, released on 27 April 2001. (J.Gaisler)
+
+	* APB peripherals in mcore used wrong clock (thanks Steven!)
+        * UART receiver used wrong irq enable bit (uart.vhd)
+	  I fixed this once already but somehow it got lost ...?
+	* ASI mapping: only ASI 8 - 11 are cachable
+	* Added PCI arbiter (thanks to R.Weigand, ESA)
+	* Added hardware multiplier and divider for V8 MAC/MUL/DIV
+	  (MAC/MUL work funded by ST, thanks Cosma!)
+	* Re-structured target dependent libraries, only tech_map.vhd
+	  needs to be edited to add support for new foundry.
+	* Synplify- and Leonardo-specific packages removed, not needed
+	  with synplify-6.2 and leonardo-2001.1a !
+	* PMON enables both uarts by default
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.2.2, released on 3 March 2001. (J.Gaisler)
+
+	* Added complete synthesis script for synopsys DC (syn/leon.dcsh)
+
+	* fix problems with 'X' in post-synthesis simulation by letting
+	  the test program explicitely initialize the data cache 
+	  and certain registers (tsource/*.c)
+
+	* added pull-ups on data bus and I/O port in VHDL test bench
+	  (tbench/tbgen.vhd)
+
+	* work-around for synopsys bug in aggregates (tech_atc35.vhd)
+
+	* documentation
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.2.1, released on 19 February 2001. (J.Gaisler)
+
+Additions:
+	* Added regfile and cache ram tests (tsource/ramtest.c)
+	* iram: can use *.dat files produced by both LEONCCS and LECCS
+Bug fixes:
+	* dcache: LDDF followed by FPOP could corrupt data on cache miss
+	* mctrl: write waitstates for ram/rom used read-ws setting
+Beauty spots:
+	* timers: wr signal missing in process sensitivity list
+	* documentation
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.2c, released on 1 November 2000. (J.Gaisler)
+
+Additions:
+	* Flattened hierarchy to simplify addition of AMBA modules
+	* Number of AHB and APB slaves is configured automatically from 
+	  configuration table
+	* Wacthdog can be supressed in configuration record
+Bug fixes:
+	* boot-prom (bprom.c) failed to set proper stack pointer
+	* Documentation
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.2b, released on 13 October 2000. (J.Gaisler)
+
+Additions:
+	* 16-bit memory interface + read-modify-write option
+	* boot-prom with memory auto-configuration
+Bug fixes:
+	* Documentation
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.2a, released on 6 October 2000. (J.Gaisler)
+
+Additions:
+	* FPU/Co-processor interface added (iface.vhd, iu.vhd, cp.vhd)
+	* AMBA AHB/APB buses
+	* boot-prom
+	* Synopsys VSS/FC2 support
+	* Leonardo 1999.x support
+	* Xilinx Virtex ram generators
+Bug fixes:
+	* wong dependency check in MULSCC when icchold enabled
+        * UART receiver used wrong irq enable bit (uart.vhd)
+	* DPRAM168x34 & DPRAM168x39 had only 136 regs (ramlib.vhd)
+	* sregsin missing in decode process sensitivity list (iu.vhd)
+	* Wrong data dependency check when FPU is enabled (iu.vhd)
+	* STF instruction did not check for address alignment error (iu.vhd)
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.1, released on 11 May 2000. (J.Gaisler)
+
+	* Improved timing for FPGA implementations
+	* Added support for bootable cache (Xilinx only)
+	* Added support for ATC35 0.35 cmos process
+	* Removed memory EDAC and cache parity
+	* Added PCI signals and PCI initial support (not completed)
+
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 2.0, released on 2 February 2000. (J.Gaisler)
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 1.1, released on 14 October 1999. (J.Gaisler)
+
+	* Added support for Xilinx Virtex FPGA
+	* Added missing contraints file for synplify
+	* Improved simulation models of target specific ram blocks
+	* Fixed false write hit during byte/halfword write (dcache)
+	* Fixed false read hit during flush opration (icache)
+	* Optimised data parity generation (icache, dcache, mctrl, macro)
+------------------------------------------------------------------------
+
+LEON-1 VHDL model version 1.0, released on 7 October 1999. (J.Gaisler)
+------------------------------------------------------------------------

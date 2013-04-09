@@ -1,0 +1,112 @@
+JDF F
+// Created by Project Navigator ver 1.0
+PROJECT syn
+DESIGN leon Normal
+DEVFAM virtexe
+DEVFAMTIME 1041788708
+DEVICE xcv1000e
+DEVICETIME 1041788708
+DEVPKG fg1156
+DEVPKGTIME 1041788708
+DEVSPEED -6
+DEVSPEEDTIME 0
+FLOW XST VHDL
+FLOWTIME 1041788708
+MODULE ..\..\leon\ahbstat.vhd
+MODSTYLE ahbstat Normal
+MODULE ..\..\leon\dcom_uart.vhd
+MODSTYLE dcom_uart Normal
+MODULE ..\..\leon\cache.vhd
+MODSTYLE cache Normal
+MODULE ..\..\leon\fpu_lth.vhd
+MODSTYLE fpu_lth Normal
+MODULE ..\..\leon\irqctrl.vhd
+MODSTYLE irqctrl Normal
+MODULE ..\..\leon\irqctrl2.vhd
+MODSTYLE irqctrl2 Normal
+MODULE ..\..\leon\meiko.vhd
+MODSTYLE fpu Normal
+MODULE ..\..\leon\lconf.vhd
+MODSTYLE lconf Normal
+MODULE ..\..\leon\mcore.vhd
+MODSTYLE mcore Normal
+MODULE ..\..\leon\mctrl.vhd
+MODSTYLE mctrl Normal
+MODULE ..\..\leon\wprot.vhd
+MODSTYLE wprot Normal
+MODULE ..\..\leon\bprom.vhd
+MODSTYLE gen_bprom Normal
+MODULE ..\..\leon\div.vhd
+MODSTYLE div Normal
+MODULE ..\..\leon\dsu.vhd
+MODSTYLE dsu Normal
+MODULE ..\..\leon\mul.vhd
+MODSTYLE mul Normal
+MODULE ..\..\leon\ahbarb.vhd
+MODSTYLE ahbarb Normal
+MODULE ..\..\leon\dcache.vhd
+MODSTYLE dcache Normal
+MODULE ..\..\leon\icache.vhd
+MODSTYLE icache Normal
+MODULE ..\..\leon\acache.vhd
+MODSTYLE acache Normal
+MODULE ..\..\leon\cachemem.vhd
+MODSTYLE cachemem Normal
+MODULE ..\..\leon\fpu_core.vhd
+MODSTYLE fpu_core Normal
+MODULE ..\..\leon\grfpc.vhd
+MODSTYLE grfpc Normal
+MODULE ..\..\leon\timers.vhd
+MODSTYLE timers Normal
+MODULE ..\..\leon\ahbram.vhd
+MODSTYLE ahbram Normal
+MODULE ..\..\leon\rstgen.vhd
+MODSTYLE rstgen Normal
+MODULE ..\..\leon\ahbmst.vhd
+MODSTYLE ahbmst Normal
+MODULE ..\..\leon\dcom.vhd
+MODSTYLE dcom Normal
+MODULE ..\..\leon\proc.vhd
+MODSTYLE proc Normal
+MODULE ..\..\leon\uart.vhd
+MODSTYLE uart Normal
+MODULE ..\..\leon\apbmst.vhd
+MODSTYLE apbmst Normal
+MODULE ..\..\leon\ioport.vhd
+MODSTYLE ioport Normal
+MODULE ..\..\leon\iu.vhd
+MODSTYLE iu Normal
+MODULE ..\..\leon\dsu_mem.vhd
+MODSTYLE dsu_mem Normal
+MODULE ..\..\leon\sdmctrl.vhd
+MODSTYLE sdmctrl Normal
+MODULE ..\..\leon\leon.vhd
+MODSTYLE leon Normal
+LIBFILE ..\..\leon\tech_fs90.vhd work ***
+LIBFILE ..\..\leon\device.vhd work ***
+LIBFILE ..\..\leon\tech_axcel.vhd work ***
+LIBFILE ..\..\leon\config.vhd work ***
+LIBFILE ..\..\leon\mmuconfig.vhd work ***
+LIBFILE ..\..\leon\fpulib.vhd work ***
+LIBFILE ..\..\leon\target.vhd work ***
+LIBFILE ..\..\leon\iface.vhd work ***
+LIBFILE ..\..\leon\macro.vhd work ***
+LIBFILE ..\..\leon\tech_virtex2.vhd work ***
+LIBFILE ..\..\leon\amba.vhd work ***
+LIBFILE ..\..\leon\tech_tsmc25.vhd work ***
+LIBFILE ..\..\leon\tech_map.vhd work ***
+LIBFILE ..\..\leon\ambacomp.vhd work ***
+LIBFILE ..\..\leon\tech_generic.vhd work ***
+LIBFILE ..\..\leon\tech_proasic.vhd work ***
+LIBFILE ..\..\leon\tech_atc25.vhd work ***
+LIBFILE ..\..\leon\tech_atc35.vhd work ***
+LIBFILE ..\..\leon\tech_atc18.vhd work ***
+LIBFILE ..\..\leon\multlib.vhd work ***
+LIBFILE ..\..\leon\tech_virtex.vhd work ***
+LIBFILE ..\..\leon\sparcv8.vhd work ***
+LIBFILE ..\..\leon\tech_umc18.vhd work ***
+DEPASSOC leon leon_xst.ucf Normal
+[Normal]
+p_SimModelTarget=xstvhd, virtexe, VHDL.t_postMapSimModel, 1041792828, Modelsim_VHDL
+[STRATEGY-LIST]
+Normal=True

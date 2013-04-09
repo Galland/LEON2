@@ -1,0 +1,21 @@
+
+LEON synthesis scripts
+----------------------
+
+The synthesis scripts are now placed in a sub-directory for
+each synthesis tool. The following tools are supported:
+
+synopsys :	scripts for Synopsys DC and FC2
+
+synplify :	scripts and project files for Synplify
+
+xst      :	scripts and project files for Xilinx ISE/XST
+
+In addition, templates for synthesis and place&route for a few
+fpga boards are available in the boards directory.
+
+NOTE: all LEON files are read from the standard leon source
+directory (../leon), MAKE SURE ../leon/device.vhd REFLECTS YOUR
+TARGET SETTINGS!!!
+
+Jiri.

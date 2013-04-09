@@ -1,0 +1,130 @@
+NET "clk" TNM_NET = "clk";
+TIMESPEC "TS_clk" = PERIOD "clk" 40 ns HIGH 50 %;
+OFFSET = IN 6 ns BEFORE "clk";
+OFFSET = OUT 17 ns AFTER "clk"; 
+NET "clk" LOC = "P89";
+
+# Reset at SW1
+NET "resetn" LOC = "P174";
+
+# Error at LED bar 4
+NET "error" LOC = "P162";
+
+# RAM
+NET "address1(0)" LOC = "P200";
+NET "address1(1)" LOC = "P199";
+NET "address1(2)" LOC = "P195";
+NET "address1(3)" LOC = "P194";
+NET "address1(4)" LOC = "P193";
+NET "address1(5)" LOC = "P192";
+NET "address1(6)" LOC = "P191";
+NET "address1(7)" LOC = "P189";
+NET "address1(8)" LOC = "P188";
+NET "address1(9)" LOC = "P187";
+NET "address1(10)" LOC = "P238";
+NET "address1(11)" LOC = "P237";
+NET "address1(12)" LOC = "P236";
+NET "address1(13)" LOC = "P235";
+NET "address1(14)" LOC = "P234";
+NET "address1(15)" LOC = "P232";
+NET "address1(16)" LOC = "P231";
+NET "address1(17)" LOC = "P230";
+NET "address1(18)" LOC = "P229";
+NET "address2(0)" LOC = "P67";
+NET "address2(1)" LOC = "P66";
+NET "address2(2)" LOC = "P65";
+NET "address2(3)" LOC = "P64";
+NET "address2(4)" LOC = "P63";
+NET "address2(5)" LOC = "P57";
+NET "address2(6)" LOC = "P56";
+NET "address2(7)" LOC = "P55";
+NET "address2(8)" LOC = "P54";
+NET "address2(9)" LOC = "P53";
+NET "address2(10)" LOC = "P108";
+NET "address2(11)" LOC = "P107";
+NET "address2(12)" LOC = "P103";
+NET "address2(13)" LOC = "P102";
+NET "address2(14)" LOC = "P101";
+NET "address2(15)" LOC = "P100";
+NET "address2(16)" LOC = "P99";
+NET "address2(17)" LOC = "P97";
+NET "address2(18)" LOC = "P96";
+NET "data1(0)" LOC = "P202";
+NET "data1(1)" LOC = "P203";
+NET "data1(2)" LOC = "P205";
+NET "data1(3)" LOC = "P206";
+NET "data1(4)" LOC = "P207";
+NET "data1(5)" LOC = "P208";
+NET "data1(6)" LOC = "P209";
+NET "data1(7)" LOC = "P215";
+NET "data1(8)" LOC = "P216";
+NET "data1(9)" LOC = "P217";
+NET "data1(10)" LOC = "P218";
+NET "data1(11)" LOC = "P220";
+NET "data1(12)" LOC = "P221";
+NET "data1(13)" LOC = "P222";
+NET "data1(14)" LOC = "P223";
+NET "data1(15)" LOC = "P224";
+NET "data2(0)" LOC = "P70";
+NET "data2(1)" LOC = "P71";
+NET "data2(2)" LOC = "P72";
+NET "data2(3)" LOC = "P73";
+NET "data2(4)" LOC = "P74";
+NET "data2(5)" LOC = "P78";
+NET "data2(6)" LOC = "P79";
+NET "data2(7)" LOC = "P80";
+NET "data2(8)" LOC = "P81";
+NET "data2(9)" LOC = "P82";
+NET "data2(10)" LOC = "P84";
+NET "data2(11)" LOC = "P85";
+NET "data2(12)" LOC = "P86";
+NET "data2(13)" LOC = "P87";
+NET "data2(14)" LOC = "P93";
+NET "data2(15)" LOC = "P94";
+NET "ramsn1" LOC = "P186";
+NET "ramsn2" LOC = "P109";
+NET "ramoen1" LOC = "P228";
+NET "ramoen2" LOC = "P95";
+NET "rwen1" LOC = "P201";
+NET "rwen2" LOC = "P68";
+
+# UART 1
+NET "rxd1" LOC = "P184";
+NET "txd1" LOC = "P178";
+#NET "rts1" LOC = "P123"
+#NET "cts1" LOC = "P185"
+
+# DSU
+NET "dsurx" LOC = "P185";
+NET "dsutx" LOC = "P123";
+# DSU enable at SW6-1
+NET "dsuen" LOC = "P161";
+# DSU break at SW6-2
+NET "dsubre" LOC = "P159";
+# DSU active at LED bar 3
+NET "dsuact" LOC = "P160";
+
+# Ethernet
+NET "etxd(0)" LOC = "P42";
+NET "etxd(1)" LOC = "P41";
+NET "etxd(2)" LOC = "P40";
+NET "etxd(3)" LOC = "P39";
+NET "etx_en" LOC = "P25";
+NET "etx_er" LOC = "P27";
+NET "etx_clk" LOC = "P210";
+NET "etx_clk" TNM_NET = "etx_clk";
+TIMESPEC "TS_etx_clk" = PERIOD "etx_clk" 40 ns HIGH 50 %;
+NET "erxd(0)" LOC = "P38";
+NET "erxd(1)" LOC = "P36";
+NET "erxd(2)" LOC = "P35";
+NET "erxd(3)" LOC = "P34";
+NET "erx_dv" LOC = "P26";
+NET "erx_er" LOC = "P28";
+NET "erx_crs" LOC = "P21";
+NET "erx_col" LOC = "P23";
+NET "erx_clk" LOC = "P213";
+NET "erx_clk" TNM_NET = "erx_clk";
+TIMESPEC "TS_erx_clk" = PERIOD "erx_clk" 40 ns HIGH 50 %;
+NET "emdc" LOC = "P19";
+NET "emdio" LOC = "P20";
+NET "emdio" PULLDOWN;

@@ -1,0 +1,14 @@
+MODEL leon incremental_synthesis=no;
+
+  MODEL genoutpad incremental_synthesis=no;
+  MODEL inpad incremental_synthesis=no;
+  MODEL outpad incremental_synthesis=no;
+  MODEL outpad1 incremental_synthesis=no;
+  MODEL outpad2 incremental_synthesis=no;
+  MODEL virtex2_dpram incremental_synthesis=no;
+  MODEL geniopad incremental_synthesis=no;
+  MODEL iopad incremental_synthesis=no;
+  MODEL smiopad incremental_synthesis=no;
+  MODEL iopad0 incremental_synthesis=no;
+  MODEL uart incremental_synthesis=no;
+  MODEL syncram9 incremental_synthesis=no;
